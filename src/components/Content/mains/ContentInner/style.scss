@@ -1,0 +1,14 @@
+.content-inner {
+  width: 1000px;
+  min-height: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+
+  background: #fff;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: minmax(100vh, auto);
+  grid-gap: 15px;
+}
