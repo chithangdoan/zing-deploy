@@ -2,11 +2,13 @@ import React from 'react';
 import RankSinger from '../RankSinger';
 import RankSong from '../RankSong';
 
-const RankTextBox = () => {
+import './style.scss';
+
+const RankTextBox = ({ song, singer }) => {
   return (
-    <div>
-      <RankSong />
-      <RankSinger />
+    <div className="rank-text-box">
+      <RankSong song={song} />
+      <RankSinger singer={singer} />
     </div>
   );
 };

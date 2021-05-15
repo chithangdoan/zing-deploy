@@ -1,7 +1,8 @@
 import React from 'react';
+import './style.scss';
 
-const RankSong = () => {
-  return <div>Sắp 30</div>;
+const RankSong = ({ song }) => {
+  return <div className='rank-song'>{song}</div>;
 };
 
 export default RankSong;

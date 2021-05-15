@@ -3,7 +3,7 @@ import React from 'react';
 const MenuPagesItem = () => {
   return (
     <div>
-      <a href='#'>MP3</a>
+      <button>MP3</button>
     </div>
   );
 };

@@ -1,0 +1,6 @@
+.top-song-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px 10px;
+}

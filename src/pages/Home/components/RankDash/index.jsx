@@ -1,7 +1,12 @@
 import React from 'react';
+import { LineOutlined } from '@ant-design/icons';
 
 const RankDash = () => {
-  return <div>-</div>;
+  return (
+    <div>
+      <LineOutlined />
+    </div>
+  );
 };
 
 export default RankDash;

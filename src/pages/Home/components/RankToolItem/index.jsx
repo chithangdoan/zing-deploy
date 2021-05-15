@@ -7,11 +7,19 @@ import {
 
 const RankToolItem = () => {
   return (
-    <div>
-      <DownloadOutlined />
-      <PlusOutlined />
-      <ShareAltOutlined />
-    </div>
+    <>
+      <div>
+        <DownloadOutlined style={{ fontSize: '16px', color: '#888' }} />
+      </div>
+
+      <div>
+        <PlusOutlined style={{ fontSize: '16px', color: '#888' }} />
+      </div>
+
+      <div>
+        <ShareAltOutlined style={{ fontSize: '16px', color: '#888' }} />
+      </div>
+    </>
   );
 };
 

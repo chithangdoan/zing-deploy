@@ -4,15 +4,16 @@ import RankImage from '../RankImage';
 import RankNumber from '../RankNumber';
 import RankTextBox from '../RankTextBox';
 import RankToolList from '../RankToolList';
+
 import './style.scss';
 
-const RankItem = () => {
+const RankItem = ({ item }) => {
   return (
     <div className='rank-item'>
-      <RankNumber />
+      <RankNumber number={item.number} />
       <RankDash />
-      <RankImage />
-      <RankTextBox />
+      <RankImage img={item.img} />
+      <RankTextBox song={item.song} singer={item.singer} />
       <RankToolList />
     </div>
   );
