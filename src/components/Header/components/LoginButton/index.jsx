@@ -3,7 +3,7 @@ import './style.scss';
 
 const LoginButton = () => {
   return (
-    <div>
+    <div className='login-button'>
       <button>Đăng nhập</button>
     </div>
   );

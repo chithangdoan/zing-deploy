@@ -4,9 +4,9 @@ import { PlayCircleOutlined } from '@ant-design/icons';
 const WeekMVLinkPlay = () => {
   return (
     <div>
-      <div className='week-mv-link-play'>
-        <PlayCircleOutlined />
-      </div>
+      <span>
+        <PlayCircleOutlined style={{ fontSize: '22px', color: '#888' }} />
+      </span>
     </div>
   );
 };

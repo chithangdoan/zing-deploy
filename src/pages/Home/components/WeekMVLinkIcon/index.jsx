@@ -3,9 +3,11 @@ import { RightOutlined } from '@ant-design/icons';
 
 const WeekMVLinkIcon = () => {
   return (
-    <div>
-      <RightOutlined />
-    </div>
+    <>
+      <span>
+        <RightOutlined style={{ color: 'purple' }} />
+      </span>
+    </>
   );
 };
 

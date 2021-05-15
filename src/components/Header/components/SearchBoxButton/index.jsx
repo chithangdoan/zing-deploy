@@ -1,10 +1,14 @@
 import React from 'react';
+import { SearchOutlined } from '@ant-design/icons';
+import './style.scss';
 
 const SearchBoxButton = () => {
   return (
-    <>
-      <button>Search</button>
-    </>
+    <div className='search-box-button'>
+      <button>
+        <SearchOutlined />
+      </button>
+    </div>
   );
 };
 

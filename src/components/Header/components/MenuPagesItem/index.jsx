@@ -1,10 +1,11 @@
 import React from 'react';
+import './style.scss';
 
-const MenuPagesItem = () => {
+const MenuPagesItem = ({ item }) => {
   return (
-    <div>
-      <button>MP3</button>
-    </div>
+    <>
+      <button className='menu-pages-item'>{item}</button>
+    </>
   );
 };
 

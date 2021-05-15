@@ -1,10 +1,11 @@
 .content-inner {
   width: 1000px;
-  min-height: 100vh;
-  height: 100vh;
-  margin: 0 auto;
+  height: auto;
+  background-color: #fff;
 
-  background: #fff;
+  margin: 0 auto;
+  padding: 15px;
+
   position: relative;
 
   display: grid;

@@ -5,7 +5,7 @@ import './style.scss';
 
 const SearchBox = () => {
   return (
-    <div>
+    <div className='search-box'>
       <SearchBoxInput />
       <SearchBoxButton />
     </div>

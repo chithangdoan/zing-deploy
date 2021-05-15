@@ -8,7 +8,7 @@ import './style.scss';
 const WeekMVLink = () => {
   return (
     <div className='week-mv-link'>
-      <div className='week-mv-link__left'>
+      <div>
         <WeekMVLinkName />
         <WeekMVLinkIcon />
       </div>
