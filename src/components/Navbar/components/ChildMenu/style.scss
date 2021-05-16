@@ -1,0 +1,15 @@
+.child-menu {
+  display: flex;
+
+  position: absolute;
+  top: 6vh;
+  left: 0;
+  z-index: 10;
+  background: #fff;
+
+  padding: 15px;
+
+  width: 0;
+  height: 0;
+  opacity: 0;
+}

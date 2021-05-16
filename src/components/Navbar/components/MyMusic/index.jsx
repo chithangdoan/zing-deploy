@@ -1,7 +1,8 @@
 import React from 'react';
+import './style.scss';
 
 const MyMusic = () => {
-  return <div>Nhạc Cá Nhân</div>;
+  return <div className='my-music'>Nhạc Cá Nhân</div>;
 };
 
 export default MyMusic;

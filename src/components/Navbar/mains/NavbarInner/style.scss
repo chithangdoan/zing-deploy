@@ -4,5 +4,8 @@
 
   margin: 0 auto;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
 }
