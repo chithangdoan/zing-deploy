@@ -1,0 +1,6 @@
+.hot-artist-list {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  grid-gap: 0 10px;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import WeekMVTop1 from '../WeekMVTop1';
 import WeekMVTopNList from '../WeekMVTopNList';
+import './style.scss';
 
 const listItem = [
   {
@@ -46,7 +47,7 @@ const listItemTopN = listItem.slice(0, listItem.length + 1);
 
 const WeekMVList = () => {
   return (
-    <div>
+    <div className='week-mv-list'>
       <WeekMVTop1 itemTop1={itemTop1} />
       <WeekMVTopNList listItemTopN={listItemTopN} />
     </div>

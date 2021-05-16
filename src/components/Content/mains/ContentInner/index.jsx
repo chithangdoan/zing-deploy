@@ -1,13 +1,13 @@
 import React from 'react';
-import ContentLeft from '../../../../pages/Home/components/ContentLeft';
-import ContentRight from '../../../../pages/Home/components/ContentRight';
+import ContentBottom from '../../../../pages/Home/mains/ContentBottom';
+import ContentTop from '../../../../pages/Home/mains/ContentTop';
 
 import './style.scss';
 
 const ContentInner = () => (
   <div className='content-inner'>
-    <ContentLeft />
-    <ContentRight />
+    <ContentTop />
+    <ContentBottom />
   </div>
 );
 

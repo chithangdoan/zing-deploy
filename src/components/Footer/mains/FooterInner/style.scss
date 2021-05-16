@@ -3,4 +3,9 @@
   margin: 0 auto;
   height: 122px;
   position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(3, max-content) auto;
+  grid-template-rows: auto;
+  align-items: center;
 }

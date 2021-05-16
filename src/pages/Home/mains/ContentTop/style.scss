@@ -1,0 +1,15 @@
+.content-top {
+  width: 1000px;
+  height: auto;
+  background-color: #fff;
+
+  margin: 0 auto;
+  padding: 15px;
+
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: minmax(100vh, auto) auto;
+  grid-gap: 15px 10px;
+}
