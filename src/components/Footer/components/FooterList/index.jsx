@@ -1,5 +1,7 @@
-import React from 'react';
-import FooterItem from '../FooterItem';
+// libs
+import React from "react";
+// components
+import FooterItem from "../FooterItem";
 
 const FooterList = ({ list }) => {
   const renderItem = list.map((item) => <FooterItem link={item} />);

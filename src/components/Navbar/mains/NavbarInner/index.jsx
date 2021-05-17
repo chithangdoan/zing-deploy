@@ -1,11 +1,13 @@
-import React from 'react';
-import NavbarLeft from '../../components/NavbarLeft';
-import NavbarRight from '../../components/NavbarRight';
-
-import './style.scss';
+// Libs
+import React from "react";
+// Components
+import NavbarLeft from "../../components/NavbarLeft";
+import NavbarRight from "../../components/NavbarRight";
+// SCSS
+import "./style.scss";
 
 const NavbarInner = () => (
-  <div className='navbar-inner'>
+  <div className="navbar-inner">
     <NavbarLeft />
     <NavbarRight />
   </div>

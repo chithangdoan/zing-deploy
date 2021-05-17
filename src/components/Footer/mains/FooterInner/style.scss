@@ -1,11 +1,12 @@
 .footer-inner {
-  width: 1000px;
-  margin: 0 auto;
-  height: 122px;
   position: relative;
 
   display: grid;
   grid-template-columns: repeat(3, max-content) auto;
   grid-template-rows: auto;
   align-items: center;
+
+  margin: 0 auto;
+  width: 1000px;
+  height: 122px;
 }

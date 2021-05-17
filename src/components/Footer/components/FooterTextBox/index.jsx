@@ -1,15 +1,16 @@
-import React from 'react';
-import CopyRight from '../CopyRight';
-import License from '../License';
-import './style.scss';
+// libs
+import React from "react";
+// components
+import CopyRight from "../CopyRight";
+import License from "../License";
+// scss
+import "./style.scss";
 
-const FooterTextBox = () => {
-  return (
-    <div className='footer-text-box'>
-      <CopyRight />
-      <License />
-    </div>
-  );
-};
+const FooterTextBox = () => (
+  <div className="footer-text-box">
+    <CopyRight />
+    <License />
+  </div>
+);
 
 export default FooterTextBox;

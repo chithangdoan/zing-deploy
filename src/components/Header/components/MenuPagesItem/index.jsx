@@ -1,12 +1,14 @@
-import React from 'react';
-import './style.scss';
+// Libs
+import React from "react";
+// SCSS
+import "./style.scss";
 
-const MenuPagesItem = ({ item }) => {
-  return (
-    <>
-      <button className='menu-pages-item'>{item}</button>
-    </>
-  );
-};
+const MenuPagesItem = ({ item }) => (
+  <>
+    <button type="button" className="menu-pages-item">
+      {item}
+    </button>
+  </>
+);
 
 export default MenuPagesItem;

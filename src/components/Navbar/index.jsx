@@ -1,9 +1,12 @@
-import React from 'react';
-import NavbarInner from './mains/NavbarInner';
-import './style.scss';
+// Libs
+import React from "react";
+// Components
+import NavbarInner from "./mains/NavbarInner";
+// SCSS
+import "./style.scss";
 
 const Navbar = () => (
-  <div className='navbar'>
+  <div className="navbar">
     <NavbarInner />
   </div>
 );

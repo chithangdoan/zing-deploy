@@ -1,8 +1,8 @@
-import React from 'react';
-import './style.scss';
+import React from "react";
+import "./style.scss";
 
-const VideoHotSinger = ({ singer }) => {
-  return <div className='video-hot-singer'>{singer}</div>;
-};
+const VideoHotSinger = ({ singer }) => (
+  <div className="video-hot-singer">{singer}</div>
+);
 
 export default VideoHotSinger;

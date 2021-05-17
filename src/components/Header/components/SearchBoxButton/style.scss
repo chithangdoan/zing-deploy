@@ -4,10 +4,11 @@
   right: 0;
 
   & button {
-    height: 29px;
-    border: none;
     outline: none;
-    cursor: pointer;
+    border: none;
+    height: 29px;
+
     background: #fff;
+    cursor: pointer;
   }
 }

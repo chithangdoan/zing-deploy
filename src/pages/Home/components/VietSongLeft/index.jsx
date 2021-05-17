@@ -1,7 +1,5 @@
-import React from 'react';
+import React from "react";
 
-const VietSongLeft = () => {
-  return <div>VietSongLeft</div>;
-};
+const VietSongLeft = () => <div>VietSongLeft</div>;
 
 export default VietSongLeft;

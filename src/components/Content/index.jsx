@@ -1,9 +1,12 @@
-import React from 'react';
-import ContentInner from './mains/ContentInner';
-import './style.scss';
+// libs
+import React from "react";
+// components
+import ContentInner from "./mains/ContentInner";
+// scss
+import "./style.scss";
 
 const Content = () => (
-  <div className='content'>
+  <div className="content">
     <ContentInner />
   </div>
 );

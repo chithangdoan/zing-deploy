@@ -1,12 +1,12 @@
-import React from 'react';
-import HotArtistItemPhoto from '../HotArtistItemPhoto';
+// libs
+import React from "react";
+// components
+import HotArtistItemPhoto from "../HotArtistItemPhoto";
 
-const HotArtistItem = ({ item }) => {
-  return (
-    <div>
-      <HotArtistItemPhoto img={item.img} />
-    </div>
-  );
-};
+const HotArtistItem = ({ item }) => (
+  <div>
+    <HotArtistItemPhoto img={item.img} />
+  </div>
+);
 
 export default HotArtistItem;

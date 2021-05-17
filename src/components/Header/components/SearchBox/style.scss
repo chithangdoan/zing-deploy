@@ -1,6 +1,8 @@
 .search-box {
+  position: relative;
+
+  overflow: hidden;
+
   width: 355px;
   height: 29px;
-  position: relative;
-  overflow: hidden;
 }

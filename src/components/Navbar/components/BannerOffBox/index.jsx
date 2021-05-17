@@ -1,15 +1,16 @@
-import React from 'react';
-import BannerOffIcon from '../BannerOffIcon';
-import BannerOffName from '../BannerOffName';
-import './style.scss';
+// Libs
+import React from "react";
+// Components
+import BannerOffIcon from "../BannerOffIcon";
+import BannerOffName from "../BannerOffName";
+// SCSS
+import "./style.scss";
 
-const BannerOffBox = () => {
-  return (
-    <div className='banner-off-box'>
-      <BannerOffIcon />
-      <BannerOffName />
-    </div>
-  );
-};
+const BannerOffBox = () => (
+  <div className="banner-off-box">
+    <BannerOffIcon />
+    <BannerOffName />
+  </div>
+);
 
 export default BannerOffBox;

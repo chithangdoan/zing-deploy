@@ -1,15 +1,16 @@
-import React from 'react';
-import BannerOffBox from '../BannerOffBox';
-import UploadButton from '../UploadButton';
-import './style.scss';
+// libs
+import React from "react";
+// components
+import BannerOffBox from "../BannerOffBox";
+import UploadButton from "../UploadButton";
+// scss
+import "./style.scss";
 
-const NavbarRight = () => {
-  return (
-    <div className='navbar-right'>
-      <BannerOffBox />
-      <UploadButton />
-    </div>
-  );
-};
+const NavbarRight = () => (
+  <div className="navbar-right">
+    <BannerOffBox />
+    <UploadButton />
+  </div>
+);
 
 export default NavbarRight;

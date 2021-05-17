@@ -1,5 +1,5 @@
-import React from 'react';
-import WeekMVTopNItem from '../WeekMVTopNItem';
+import React from "react";
+import WeekMVTopNItem from "../WeekMVTopNItem";
 
 const WeekMVTopNList = ({ listItemTopN }) => {
   const renderListItem = listItemTopN.map((item) => (

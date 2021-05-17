@@ -1,15 +1,16 @@
-import React from 'react';
-import AlbumHotIcon from '../AlbumHotIcon';
-import AlbumHotName from '../AlbumHotName';
-import './style.scss';
+// libs
+import React from "react";
+// components
+import AlbumHotName from "../AlbumHotName";
+import AlbumHotIcon from "../AlbumHotIcon";
+// scss
+import "./style.scss";
 
-const AlbumHotLink = () => {
-  return (
-    <div className='album-hot-link'>
-      <AlbumHotName />
-      <AlbumHotIcon />
-    </div>
-  );
-};
+const AlbumHotLink = () => (
+  <div className="album-hot-link">
+    <AlbumHotName />
+    <AlbumHotIcon />
+  </div>
+);
 
 export default AlbumHotLink;

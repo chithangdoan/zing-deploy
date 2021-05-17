@@ -1,16 +1,16 @@
-import React from 'react';
-import './style.scss';
+// Libs
+import React from "react";
+// SCSS
+import "./style.scss";
 
-const SearchBoxInput = () => {
-  return (
-    <>
-      <input
-        className='search-box-input'
-        type='text'
-        placeholder='Nhập nội dung cần tìm'
-      />
-    </>
-  );
-};
+const SearchBoxInput = () => (
+  <>
+    <input
+      className="search-box-input"
+      type="text"
+      placeholder="Nhập nội dung cần tìm"
+    />
+  </>
+);
 
 export default SearchBoxInput;

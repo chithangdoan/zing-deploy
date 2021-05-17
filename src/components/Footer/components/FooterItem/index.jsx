@@ -1,12 +1,12 @@
-import React from 'react';
-import './style.scss';
+// libs
+import React from "react";
+// scss
+import "./style.scss";
 
-const FooterItem = ({ link }) => {
-  return (
-    <div className='footer-item'>
-      <a>{link}</a>
-    </div>
-  );
-};
+const FooterItem = ({ link }) => (
+  <div className="footer-item">
+    <a>{link}</a>
+  </div>
+);
 
 export default FooterItem;

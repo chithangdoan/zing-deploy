@@ -1,14 +1,12 @@
-import React from 'react';
-import VideoHotLink from '../VideoHotLink';
-import VideoHotList from '../VideoHotList';
+import React from "react";
+import VideoHotLink from "../VideoHotLink";
+import VideoHotList from "../VideoHotList";
 
-const VideoHot = () => {
-  return (
-    <div>
-      <VideoHotLink />
-      <VideoHotList />
-    </div>
-  );
-};
+const VideoHot = () => (
+  <div>
+    <VideoHotLink />
+    <VideoHotList />
+  </div>
+);
 
 export default VideoHot;

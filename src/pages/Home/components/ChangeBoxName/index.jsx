@@ -1,8 +1,10 @@
-import React from 'react';
-import './/style.scss';
+// libs
+import React from "react";
+// scss
+import "./style.scss";
 
-const ChangeBoxName = () => {
-  return <div className='change-box-name'>TÂM TRẠNG TAN CHẬM</div>;
-};
+const ChangeBoxName = () => (
+  <div className="change-box-name">TÂM TRẠNG TAN CHẬM</div>
+);
 
 export default ChangeBoxName;

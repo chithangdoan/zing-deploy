@@ -1,12 +1,10 @@
-import React from 'react';
-import './style.scss';
+import React from "react";
+import "./style.scss";
 
-const WeekMVLinkName = () => {
-  return (
-    <>
-      <span className='week-mv-link-name'>#ZingChart Tuần - Bài Hát</span>
-    </>
-  );
-};
+const WeekMVLinkName = () => (
+  <>
+    <span className="week-mv-link-name">#ZingChart Tuần - Bài Hát</span>
+  </>
+);
 
 export default WeekMVLinkName;

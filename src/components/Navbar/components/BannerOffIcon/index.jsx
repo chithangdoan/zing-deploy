@@ -1,12 +1,11 @@
-import React from 'react';
-import { BellOutlined } from '@ant-design/icons';
+// Libs
+import React from "react";
+import { BellOutlined } from "@ant-design/icons";
 
-const BannerOffIcon = () => {
-  return (
-    <div>
-      <BellOutlined style={{ fontSize: '18px' }} />
-    </div>
-  );
-};
+const BannerOffIcon = () => (
+  <>
+    <BellOutlined style={{ fontSize: "18px" }} />
+  </>
+);
 
 export default BannerOffIcon;

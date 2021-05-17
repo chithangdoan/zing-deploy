@@ -1,8 +1,8 @@
-import React from 'react';
-import './style.scss';
+import React from "react";
+import "./style.scss";
 
-const WeekMVTopNOverplay = () => {
-  return <div className='week-mv-top-n-overlay'>WeekMVTopNOverplay</div>;
-};
+const WeekMVTopNOverplay = () => (
+  <div className="week-mv-top-n-overlay">WeekMVTopNOverplay</div>
+);
 
 export default WeekMVTopNOverplay;

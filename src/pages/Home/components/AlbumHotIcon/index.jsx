@@ -1,11 +1,12 @@
-import React from 'react';
-import { RightOutlined } from '@ant-design/icons';
-const AlbumHotIcon = () => {
-  return (
-    <div>
-      <RightOutlined style={{ color: 'purple' }} />
-    </div>
-  );
-};
+// libs
+import React from "react";
+// components
+import { RightOutlined } from "@ant-design/icons";
+
+const AlbumHotIcon = () => (
+  <div>
+    <RightOutlined style={{ color: "purple" }} />
+  </div>
+);
 
 export default AlbumHotIcon;

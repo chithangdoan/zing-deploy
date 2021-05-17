@@ -3,14 +3,16 @@
   grid-template-columns: repeat(4, max-content);
   grid-template-rows: auto;
   grid-gap: 0 10px;
+  justify-content: end;
 
   margin-bottom: 10px;
-  justify-content: end;
 
   & > div {
     width: 30px;
     height: 30px;
+
     background: #fff;
+
     text-align: center;
     line-height: 30px;
   }

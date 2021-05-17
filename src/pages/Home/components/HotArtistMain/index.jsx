@@ -1,12 +1,12 @@
-import React from 'react';
-import HotArtistMainPhoto from '../HotArtistMainPhoto';
+// libs
+import React from "react";
+// components
+import HotArtistMainPhoto from "../HotArtistMainPhoto";
 
-const HotArtistMain = ({ main }) => {
-  return (
-    <div>
-      <HotArtistMainPhoto img={main.img} />
-    </div>
-  );
-};
+const HotArtistMain = ({ main }) => (
+  <div>
+    <HotArtistMainPhoto img={main.img} />
+  </div>
+);
 
 export default HotArtistMain;

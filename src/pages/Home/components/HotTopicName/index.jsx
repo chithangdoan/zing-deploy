@@ -1,8 +1,6 @@
-import React from 'react';
-import './style.scss';
+import React from "react";
+import "./style.scss";
 
-const HotTopicName = () => {
-  return <div className='hot-topic-name'>Chủ đề hot</div>;
-};
+const HotTopicName = () => <div className="hot-topic-name">Chủ đề hot</div>;
 
 export default HotTopicName;

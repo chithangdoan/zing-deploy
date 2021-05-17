@@ -1,15 +1,15 @@
-import React from 'react';
-import { SearchOutlined } from '@ant-design/icons';
-import './style.scss';
+// Libs
+import React from "react";
+import { SearchOutlined } from "@ant-design/icons";
+// SCSS
+import "./style.scss";
 
-const SearchBoxButton = () => {
-  return (
-    <div className='search-box-button'>
-      <button>
-        <SearchOutlined />
-      </button>
-    </div>
-  );
-};
+const SearchBoxButton = () => (
+  <div className="search-box-button">
+    <button type="button">
+      <SearchOutlined />
+    </button>
+  </div>
+);
 
 export default SearchBoxButton;

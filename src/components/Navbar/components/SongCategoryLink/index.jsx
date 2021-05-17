@@ -1,8 +1,10 @@
-import React from 'react';
-import './style.scss';
+// libs
+import React from "react";
+// scss
+import "./style.scss";
 
-const SongCategoryLink = ({ name }) => {
-  return <div className='song-category-link'>{name}</div>;
-};
+const SongCategoryLink = ({ name }) => (
+  <div className="song-category-link">{name}</div>
+);
 
 export default SongCategoryLink;

@@ -1,8 +1,6 @@
-import React from 'react';
-import './style.scss';
+import React from "react";
+import "./style.scss";
 
-const RankSong = ({ song }) => {
-  return <div className='rank-song'>{song}</div>;
-};
+const RankSong = ({ song }) => <div className="rank-song">{song}</div>;
 
 export default RankSong;

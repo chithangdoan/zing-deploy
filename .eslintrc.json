@@ -74,6 +74,17 @@
     "no-shadow": "off",
     "import/extensions": ["error", "never"],
     "import/order": 0,
-    "eslint-comments/no-unlimited-disable": "off"
+    "eslint-comments/no-unlimited-disable": "off",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "FunctionExpression",
+        "message": "Function expressions are not allowed."
+      },
+      {
+        "selector": "CallExpression[callee.name='setTimeout'][arguments.length!=2]",
+        "message": "setTimeout must always be invoked with two arguments."
+      }
+    ]
   }
 }

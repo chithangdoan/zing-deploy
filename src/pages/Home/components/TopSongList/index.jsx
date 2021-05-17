@@ -1,12 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import TopSongItem from '../TopSongItem';
-import './style.scss';
+import React from "react";
+import TopSongItem from "../TopSongItem";
+import "./style.scss";
 
 const TopSongList = ({ listItem, activeIndex, handleMouseEnter }) => {
   const RenderList = listItem.map((item, index) => (
     <TopSongItem
-      key={index}
       item={item}
       index={index}
       activeIndex={activeIndex}
@@ -14,7 +12,7 @@ const TopSongList = ({ listItem, activeIndex, handleMouseEnter }) => {
     />
   ));
 
-  return <div className='top-song-list'>{RenderList}</div>;
+  return <div className="top-song-list">{RenderList}</div>;
 };
 
 export default TopSongList;

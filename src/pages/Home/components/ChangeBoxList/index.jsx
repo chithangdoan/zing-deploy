@@ -1,8 +1,8 @@
-import React from 'react';
-import './style.scss';
+// libs
+import React from "react";
+// scss
+import "./style.scss";
 
-const ChangeBoxList = () => {
-  return <div className='change-box-list'>Change Box</div>;
-};
+const ChangeBoxList = () => <div className="change-box-list">Change Box</div>;
 
 export default ChangeBoxList;

@@ -1,15 +1,16 @@
-import React from 'react';
-import ContentLeft from '../../components/ContentLeft';
-import ContentRight from '../../components/ContentRight';
-import './style.scss';
+// libs
+import React from "react";
+// components
+import ContentLeft from "../../components/ContentLeft";
+import ContentRight from "../../components/ContentRight";
+// scss
+import "./style.scss";
 
-const ContentTop = () => {
-  return (
-    <div className='content-top'>
-      <ContentLeft />
-      <ContentRight />
-    </div>
-  );
-};
+const ContentTop = () => (
+  <div className="content-top">
+    <ContentLeft />
+    <ContentRight />
+  </div>
+);
 
 export default ContentTop;

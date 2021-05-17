@@ -1,14 +1,12 @@
-import React from 'react';
-import HotTopicList from '../HotTopicList';
-import HotTopicName from '../HotTopicName';
+import React from "react";
+import HotTopicList from "../HotTopicList";
+import HotTopicName from "../HotTopicName";
 
-const HotTopic = () => {
-  return (
-    <div>
-      <HotTopicName />
-      <HotTopicList />
-    </div>
-  );
-};
+const HotTopic = () => (
+  <div>
+    <HotTopicName />
+    <HotTopicList />
+  </div>
+);
 
 export default HotTopic;

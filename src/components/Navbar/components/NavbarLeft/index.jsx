@@ -1,20 +1,20 @@
-import React from 'react';
-import HomeButton from '../HomeButton';
-import Separation from '../Separation';
-import MyMusic from '../MyMusic';
-import SongCategoryList from '../SongCategoryList';
+// libs
+import React from "react";
+// components
+import HomeButton from "../HomeButton";
+import Separation from "../Separation";
+import MyMusic from "../MyMusic";
+import SongCategoryList from "../SongCategoryList";
+// scss
+import "./style.scss";
 
-import './style.scss';
-
-const NavbarLeft = () => {
-  return (
-    <div className='navbar-left'>
-      <HomeButton />
-      <MyMusic />
-      <Separation />
-      <SongCategoryList />
-    </div>
-  );
-};
+const NavbarLeft = () => (
+  <div className="navbar-left">
+    <HomeButton />
+    <Separation />
+    <MyMusic />
+    <SongCategoryList />
+  </div>
+);
 
 export default NavbarLeft;

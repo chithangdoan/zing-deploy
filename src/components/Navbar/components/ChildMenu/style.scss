@@ -1,15 +1,16 @@
 .child-menu {
-  display: flex;
-
   position: absolute;
   top: 6vh;
   left: 0;
-  z-index: 10;
-  background: #fff;
 
-  padding: 15px;
+  display: flex;
+  z-index: 10;
 
   width: 0;
   height: 0;
+  padding: 15px;
+
+  background: #fff;
+
   opacity: 0;
 }

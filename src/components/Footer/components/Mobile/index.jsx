@@ -1,8 +1,8 @@
-import React from 'react';
-import './style.scss';
+// libs
+import React from "react";
+// scss
+import "./style.scss";
 
-const Mobile = () => {
-  return <div class='mobile'>Phiên bản Mobile</div>;
-};
+const Mobile = () => <div className="mobile">Phiên bản Mobile</div>;
 
 export default Mobile;

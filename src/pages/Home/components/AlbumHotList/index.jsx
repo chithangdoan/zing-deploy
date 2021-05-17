@@ -1,8 +1,8 @@
-import React from 'react';
-import './style.scss';
+// libs
+import React from "react";
+// scss
+import "./style.scss";
 
-const AlbumHotList = () => {
-  return <div className='album-hot-list'>Album Hot</div>;
-};
+const AlbumHotList = () => <div className="album-hot-list">Album Hot</div>;
 
 export default AlbumHotList;
