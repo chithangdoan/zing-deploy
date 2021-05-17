@@ -31,6 +31,8 @@ const TopSong = () => {
 
   const [id, setId] = useState(0);
 
+  const [activeIndex, setActiveIndex] = useState(0);
+
   useEffect(() => {
     const time = setInterval(() => {
       if (id === 4) {
@@ -38,16 +40,33 @@ const TopSong = () => {
       } else {
         setId(id + 1);
       }
-
+      setActiveIndex(id);
       setImageDefault(listItem[id].img);
     }, 3000);
+
     return () => clearInterval(time);
-  });
+  }, [id, imageDefault]);
+
+  const handleMouseEnter = (img, index) => {
+    for (const [id, value] of listItem.entries()) {
+      console.log(index);
+
+      if (value.img === img) {
+        setId(id);
+        setActiveIndex(id);
+        setImageDefault(listItem[id].img);
+      }
+    }
+  };
 
   return (
     <div>
       <TopSongMain imageDefault={imageDefault} />
-      <TopSongList listItem={listItem} />
+      <TopSongList
+        listItem={listItem}
+        activeIndex={activeIndex}
+        handleMouseEnter={handleMouseEnter}
+      />
     </div>
   );
 };

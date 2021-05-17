@@ -1,10 +1,20 @@
 import React from 'react';
+import classNames from 'classnames';
 import './style.scss';
 
-const TopSongItem = ({ img }) => {
+const TopSongItem = ({ item, index, activeIndex, handleMouseEnter }) => {
+  const show =
+    activeIndex === index ? { active: true } : { [`un-active`]: false };
+
+  const css = classNames('top-song-img', show);
+
   return (
-    <div>
-      <img className='top-song-img' alt='top-song-item' src={img} />
+    <div className={css}>
+      <img
+        onMouseEnter={() => handleMouseEnter(item.img, index)}
+        alt='top-song-item'
+        src={item.img}
+      />
     </div>
   );
 };
