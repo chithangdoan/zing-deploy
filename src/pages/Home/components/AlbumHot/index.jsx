@@ -1,6 +1,6 @@
 // libs
 import React from "react";
-// components
+// component
 import AlbumHotLink from "../AlbumHotLink";
 import AlbumHotList from "../AlbumHotList";
 
