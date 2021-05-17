@@ -10,7 +10,7 @@ import VideoHot from "../VideoHot";
 import VietSong from "../VietSong";
 
 const ContentLeft = () => (
-  <>
+  <div className="content-left">
     <TopSong />
     <RankList />
     <ChangeBox />
@@ -18,7 +18,7 @@ const ContentLeft = () => (
     <AlbumHot />
     <VietSong />
     <HotArtist />
-  </>
+  </div>
 );
 
 export default ContentLeft;
