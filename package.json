@@ -51,7 +51,7 @@
     "lint-staged:style": "stylelint --fix --syntax scss",
     "lint-staged:prettier": "prettier -c --write",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b develop -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
