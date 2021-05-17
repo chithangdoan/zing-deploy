@@ -1,5 +1,15 @@
 .top-song-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.active {
+  border: 3px solid purple;
+}
+
+.un-active {
+  border: none;
 }
