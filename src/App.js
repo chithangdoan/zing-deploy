@@ -1,31 +1,38 @@
+// libs
 import React from "react";
-import "./App.css";
-import Home from "./pages/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+
+// components
 import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+// css
+import "./App.css";
 
-const listRoute = [
-  {
-    url: "/",
-    component: "Home",
-  },
-  {
-    url: "/about",
-    component: "About",
-  },
-];
+import { ROUTES, REDIRECTS } from "./routes/appRoute";
 
-const renderRoute = listRoute.map((item) => (
-  <Route path={item.url} component={item.component} />
+const renderPath = ROUTES.map((item) => (
+  <Route path={item.path} component={item.component} exact />
+));
+
+const renderRedirect = REDIRECTS.map((item) => (
+  <Redirect from={item.from} to={item.to} />
 ));
 
 const App = () => (
   <Router>
-    <div className="App">
+    <div>
       <Header />
       <Navbar />
+      {renderRedirect}
+      <Switch>{renderPath}</Switch>
+      <Footer />
     </div>
-    <Switch>{renderRoute}</Switch>
   </Router>
 );
 

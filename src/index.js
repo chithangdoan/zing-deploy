@@ -3,14 +3,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 // components
 import reportWebVitals from "./reportWebVitals";
-// routes
-import AppRoute from "./routes/AppRoute";
+import App from "./App";
 // css
 import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppRoute />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

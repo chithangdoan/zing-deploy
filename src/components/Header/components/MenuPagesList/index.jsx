@@ -5,9 +5,9 @@ import MenuPagesItem from "../MenuPagesItem";
 // SCSS
 import "./style.scss";
 // constant
-import { PATH } from "../../../../constants/path";
+import { ROUTES } from "../../../../routes/appRoute";
 
-const renderList = PATH.map((item) => <MenuPagesItem item={item} />);
+const renderList = ROUTES.map((item) => <MenuPagesItem item={item} />);
 
 const MenuPagesList = () => <div className="menu-pages-list">{renderList}</div>;
 
