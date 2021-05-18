@@ -21,7 +21,7 @@ const renderPath = ROUTES.map((item) => (
 ));
 
 const renderRedirect = REDIRECTS.map((item) => (
-  <Redirect from={item.from} to={item.to} />
+  <Redirect from={item.from} to={item.to} exact />
 ));
 
 const App = () => (

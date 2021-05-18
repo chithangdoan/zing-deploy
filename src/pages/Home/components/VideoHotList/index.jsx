@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import VideoHotItem from "../VideoHotItem";
+import axios from "axios";
 import "./style.scss";
 
 const listItem = [
@@ -91,6 +92,11 @@ const listItem = [
 
 const renderItem = listItem.map((item) => <VideoHotItem item={item} />);
 
-const VideoHotList = () => <div className="video-hot-list">{renderItem}</div>;
+const VideoHotList = () => {
+  useEffect(() => {
+    axios.get()
+  }, []);
+  return <div className="video-hot-list">{renderItem}</div>;
+};
 
 export default VideoHotList;

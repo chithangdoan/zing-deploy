@@ -1,8 +1,8 @@
 // libs
 import React from "react";
 // components
-import ContentLeft from "../../components/ContentLeft";
-import ContentRight from "../../components/ContentRight";
+import ContentLeft from "../ContentLeft";
+import ContentRight from "../ContentRight";
 // scss
 import "./style.scss";
 

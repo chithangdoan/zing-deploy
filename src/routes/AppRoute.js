@@ -6,12 +6,27 @@ import { PATH } from "../constants/path";
 
 export const ROUTES = [
   {
-    name: "Home",
+    name: "MP3",
     path: PATH.HOME,
     component: Home,
   },
   {
-    name: "About",
+    name: "NEWS",
+    path: PATH.HOME,
+    component: Home,
+  },
+  {
+    name: "TV",
+    path: PATH.HOME,
+    component: Home,
+  },
+  {
+    name: "ZALO PC",
+    path: PATH.HOME,
+    component: Home,
+  },
+  {
+    name: "ABOUT",
     path: PATH.ABOUT,
     component: About,
   },

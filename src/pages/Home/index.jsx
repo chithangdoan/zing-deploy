@@ -1,12 +1,14 @@
 // libs
 import React from "react";
 // components
-import Content from "../../components/Content";
+import ContentInner from "./mains/ContentInner";
+// css
+import "./style.scss";
 
 const Home = () => (
-  <>
-    <Content />
-  </>
+  <div className="Home">
+    <ContentInner />
+  </div>
 );
 
 export default Home;
