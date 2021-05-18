@@ -1,12 +1,16 @@
+// libs
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+// components
 import reportWebVitals from "./reportWebVitals";
+// routes
+import AppRoute from "./routes/AppRoute";
+// css
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppRoute />
   </React.StrictMode>,
   document.getElementById("root")
 );

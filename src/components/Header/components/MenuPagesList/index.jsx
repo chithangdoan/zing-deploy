@@ -4,10 +4,10 @@ import React from "react";
 import MenuPagesItem from "../MenuPagesItem";
 // SCSS
 import "./style.scss";
+// constant
+import { PATH } from "../../../../constants/path";
 
-const listItem = ["MP3", "NEWS", "TV", "ZALO PC"];
-
-const renderList = listItem.map((item) => <MenuPagesItem item={item} />);
+const renderList = PATH.map((item) => <MenuPagesItem item={item} />);
 
 const MenuPagesList = () => <div className="menu-pages-list">{renderList}</div>;
 
