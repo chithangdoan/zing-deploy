@@ -23,7 +23,7 @@
     "import/no-extraneous-dependencies": [
       2,
       {
-        "optionalDependencies": true,
+        "optionalDependencies": false,
         "devDependencies": [
           "**/tests/**.js",
           "/mock/**/**.js",
