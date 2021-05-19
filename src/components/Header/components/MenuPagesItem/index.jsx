@@ -1,13 +1,16 @@
 // Libs
 import React from "react";
+import { Link } from "react-router-dom";
 // SCSS
 import "./style.scss";
 
 const MenuPagesItem = ({ item }) => (
   <>
-    <button type="button" className="menu-pages-item">
-      {item}
-    </button>
+    <Link to={item.path}>
+      <button type="button" className="menu-pages-item">
+        {item.name}
+      </button>
+    </Link>
   </>
 );
 

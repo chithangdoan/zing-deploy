@@ -9,8 +9,10 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "antd": "^4.15.4",
+    "axios": "^0.21.1",
+    "babel-loader": "^8.1.0",
     "classnames": "^2.3.1",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.0",
     "prop-types": "^15.7.2",
     "query-string": "^7.0.0",
     "react": "^17.0.2",
@@ -51,7 +53,9 @@
     "lint-staged:style": "stylelint --fix --syntax scss",
     "lint-staged:prettier": "prettier -c --write",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -62,6 +66,14 @@
       {
         "files": [
           "/.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      },
+      {
+        "files": [
+          "**/*.stories.*"
         ],
         "rules": {
           "import/no-anonymous-default-export": "off"

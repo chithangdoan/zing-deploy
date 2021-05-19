@@ -1,18 +1,14 @@
 // libs
 import React from "react";
 // components
-import Content from "../../components/Content";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import Navbar from "../../components/Navbar";
+import ContentInner from "./mains/ContentInner";
+// css
+import "./style.scss";
 
 const Home = () => (
-  <>
-    <Header />
-    <Navbar />
-    <Content />
-    <Footer />
-  </>
+  <div className="Home">
+    <ContentInner />
+  </div>
 );
 
 export default Home;

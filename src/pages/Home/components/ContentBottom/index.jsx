@@ -1,7 +1,7 @@
 // libs
 import React from "react";
 // components
-import Partner from "../../components/Partner";
+import Partner from "../Partner";
 // scss
 import "./style.scss";
 

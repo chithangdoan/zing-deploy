@@ -1,8 +1,8 @@
 // libs
 import React from "react";
 // components
-import ContentTop from "../../../../pages/Home/mains/ContentTop";
-import ContentBottom from "../../../../pages/Home/mains/ContentBottom";
+import ContentTop from "../../components/ContentTop";
+import ContentBottom from "../../components/ContentBottom";
 // scss
 import "./style.scss";
 
