@@ -7,7 +7,9 @@ import "./style.scss";
 // constant
 import { ROUTES } from "../../../../routes/appRoute";
 
-const renderList = ROUTES.map((item) => <MenuPagesItem item={item} />);
+const renderList = ROUTES.map((item) => (
+  <MenuPagesItem key={Math.random()} item={item} />
+));
 
 const MenuPagesList = () => <div className="menu-pages-list">{renderList}</div>;
 

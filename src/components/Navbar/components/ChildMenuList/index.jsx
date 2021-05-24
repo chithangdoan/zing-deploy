@@ -7,7 +7,7 @@ import ChildMenuTitle from "../ChildMenuTitle";
 import "./style.scss";
 
 const ChildMenuList = ({ title, list }) => {
-  const renderList = list.map((item) => <ChildMenuLink link={item} />);
+  const renderList = list.map((item) => <ChildMenuLink key={Math.random()} link={item} />);
   return (
     <div className="child-menu-list">
       <ChildMenuTitle title={title} />

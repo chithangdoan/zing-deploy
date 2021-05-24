@@ -5,9 +5,12 @@ import HeaderInner from "./mains/HeaderInner";
 // SCSS
 import "./style.scss";
 
-const Header = () => (
+const Header = ({ preferredLocale, changeLanguage }) => (
   <div className="header">
-    <HeaderInner />
+    <HeaderInner
+      preferredLocale={preferredLocale}
+      changeLanguage={changeLanguage}
+    />
   </div>
 );
 

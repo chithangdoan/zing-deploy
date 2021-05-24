@@ -55,7 +55,9 @@ const listItem = [
   },
 ];
 
-const renderList = listItem.map((item) => <PartnerItem item={item} />);
+const renderList = listItem.map((item) => (
+  <PartnerItem key={Math.random()} item={item} />
+));
 
 const PartnerList = () => <div className="partner-list">{renderList}</div>;
 

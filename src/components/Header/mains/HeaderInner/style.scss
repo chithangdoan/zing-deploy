@@ -1,7 +1,5 @@
 .header-inner {
-  display: grid;
-  grid-template-columns: 185px 355px auto auto;
-  grid-template-rows: 50px;
+  display: flex;
   align-items: center;
 
   margin: 0 auto;

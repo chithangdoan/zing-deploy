@@ -3,7 +3,7 @@ import WeekMVTopNItem from "../WeekMVTopNItem";
 
 const WeekMVTopNList = ({ listItemTopN }) => {
   const renderListItem = listItemTopN.map((item) => (
-    <WeekMVTopNItem item={item} />
+    <WeekMVTopNItem key={Math.random()} item={item} />
   ));
 
   return <div>{renderListItem}</div>;

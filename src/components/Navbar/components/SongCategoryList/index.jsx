@@ -155,7 +155,9 @@ const listItem = [
   },
 ];
 
-const renderList = listItem.map((item) => <SongCategoryItem item={item} />);
+const renderList = listItem.map((item) => (
+  <SongCategoryItem key={Math.random()} item={item} />
+));
 
 const SongCategoryList = () => (
   <div className="song-category-list">{renderList}</div>

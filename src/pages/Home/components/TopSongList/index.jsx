@@ -5,6 +5,7 @@ import "./style.scss";
 const TopSongList = ({ listItem, activeIndex, handleMouseEnter }) => {
   const RenderList = listItem.map((item, index) => (
     <TopSongItem
+      key={Math.random()}
       item={item}
       index={index}
       activeIndex={activeIndex}

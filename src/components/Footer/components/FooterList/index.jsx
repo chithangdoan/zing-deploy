@@ -4,7 +4,9 @@ import React from "react";
 import FooterItem from "../FooterItem";
 
 const FooterList = ({ list }) => {
-  const renderItem = list.map((item) => <FooterItem link={item} />);
+  const renderItem = list.map((item) => (
+    <FooterItem key={Math.random()} link={item} />
+  ));
   return <div>{renderItem}</div>;
 };
 
