@@ -5,15 +5,15 @@ import AlbumHotItem from "../AlbumHotItem";
 // css
 import "./style.scss";
 
-const AlbumHotList = ({ handleChosenDiv, album }) => (
+const AlbumHotList = ({ handleChosenDiv, data }) => (
   <div
     className="album-hot-list"
     onMouseEnter={() => {
       handleChosenDiv("album");
     }}
   >
-    {album &&
-      album.data.map((item) => <AlbumHotItem key={item.id} item={item} />)}
+    {data &&
+      data.data.map((item) => <AlbumHotItem key={item.id} item={item} />)}
   </div>
 );
 

@@ -1,9 +1,9 @@
 // libs
 import React from "react";
+import { Button } from "antd";
 import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
 // scss
 import "./style.scss";
-import { Button } from "antd";
 
 const AlbumHotPagination = ({
   clickPreviousHandler,
