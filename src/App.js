@@ -1,5 +1,5 @@
 // libs
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,15 +25,6 @@ const renderRedirect = REDIRECTS.map((item) => (
   <Redirect key={Math.random()} from={item.from} to={item.to} />
 ));
 
-const renderPath = ROUTES.map((item) => (
-  <Route
-    key={Math.random()}
-    component={item.component}
-    path={item.path}
-    exact
-  />
-));
-
 const App = () => {
   const [lang, setLang] = useLocalStorage("langCode", "en");
 
@@ -43,10 +34,24 @@ const App = () => {
     console.log(langCode);
   };
 
+  const [chosenDiv, setChosenDiv] = useState("");
+
+  const handleChosenDiv = (div) => {
+    setChosenDiv(div);
+    // eslint-disable-next-line no-console
+    console.log(chosenDiv);
+  };
+
+  const renderPath = ROUTES.map((item) => (
+    <Route key={Math.random()} path={item.path} exact>
+      <item.component handleChosenDiv={handleChosenDiv} />
+    </Route>
+  ));
+
   return (
     <LocaleContext.Provider value={locales[lang]}>
-      <Router className="app">
-        <div>
+      <Router>
+        <div className="app">
           <Header preferredLocale={lang} changeLanguage={changeLanguage} />
           <Navbar />
           {renderRedirect}

@@ -1,114 +1,80 @@
+// libs
 import React, { useEffect, useState } from "react";
-// import VideoHotItem from "../VideoHotItem";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+// actions
+import { fetchPaginationVideo } from "../../../../actions/video";
+// components
+import VideoHotItem from "../VideoHotItem";
+// hooks
+import useHover from "../../../../hooks/use-hover";
+// css
 import "./style.scss";
 
-// const listItem = [
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/f/0/b/b/f0bb30def4c6784dc78039111c047340.jpg",
-//     song: "Walk On Da Street",
-//     singer: "16 Typh, 16 BRT",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/f/0/b/b/f0bb30def4c6784dc78039111c047340.jpg",
-//     song: "Walk On Da Street",
-//     singer: "16 Typh, 16 BRT",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/f/0/b/b/f0bb30def4c6784dc78039111c047340.jpg",
-//     song: "Walk On Da Street",
-//     singer: "16 Typh, 16 BRT",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/f/0/b/b/f0bb30def4c6784dc78039111c047340.jpg",
-//     song: "Walk On Da Street",
-//     singer: "16 Typh, 16 BRT",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/f/0/b/b/f0bb30def4c6784dc78039111c047340.jpg",
-//     song: "Walk On Da Street",
-//     singer: "16 Typh, 16 BRT",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/f/0/b/b/f0bb30def4c6784dc78039111c047340.jpg",
-//     song: "Walk On Da Street",
-//     singer: "16 Typh, 16 BRT",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/f/0/b/b/f0bb30def4c6784dc78039111c047340.jpg",
-//     song: "Walk On Da Street",
-//     singer: "16 Typh, 16 BRT",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/f/0/b/b/f0bb30def4c6784dc78039111c047340.jpg",
-//     song: "Walk On Da Street",
-//     singer: "16 Typh, 16 BRT",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/f/0/b/b/f0bb30def4c6784dc78039111c047340.jpg",
-//     song: "Walk On Da Street",
-//     singer: "16 Typh, 16 BRT",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/f/0/b/b/f0bb30def4c6784dc78039111c047340.jpg",
-//     song: "Walk On Da Street",
-//     singer: "16 Typh, 16 BRT",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/f/0/b/b/f0bb30def4c6784dc78039111c047340.jpg",
-//     song: "Walk On Da Street",
-//     singer: "16 Typh, 16 BRT",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/f/0/b/b/f0bb30def4c6784dc78039111c047340.jpg",
-//     song: "Walk On Da Street",
-//     singer: "16 Typh, 16 BRT",
-//   },
-// ];
+const VideoHotList = ({ handleChosenDiv }) => {
+  const [page, setPage] = useState(1);
 
-// const renderItem = listItem.map((item) => <VideoHotItem item={item} />);
+  const dispatch = useDispatch();
 
-const VideoHotList = () => {
-  const [data, setData] = useState([]);
+  const video = useSelector((state) => state.video.data);
+
+  const pageCount = Math.ceil(20 / 12);
 
   useEffect(() => {
-    axios
-      .get("https://my-json-server.typicode.com/chithangdoan/zing/album")
-      .then((res) => {
-        console.log(res.data);
-        setData(res.data);
-      });
-  }, []);
+    dispatch(fetchPaginationVideo(page, 12));
+
+    if (page <= 1) {
+      setPage(1);
+    }
+    if (page >= pageCount) {
+      setPage(pageCount);
+    }
+  }, [dispatch, page, pageCount]);
+
+  const [hoverRef, isHovered] = useHover();
+
+  const listKeys = ["ArrowUp", "ArrowDown", "PageUp", "PageDown"];
+
+  const downHandler = (e) => {
+    if (isHovered && listKeys.indexOf(e.key) > -1) {
+      e.preventDefault();
+
+      switch (e.key) {
+        case "ArrowUp":
+        case "PageUp":
+          setPage(page + 1);
+          console.log(`page Up = ${page}`);
+          break;
+
+        case "ArrowDown":
+        case "PageDown":
+          setPage(page - 1);
+          console.log(`page Down = ${page}`);
+          break;
+
+        default:
+          break;
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", downHandler);
+    // Remove event listeners on cleanup
+    return () => {
+      window.removeEventListener("keydown", downHandler);
+    };
+  });
 
   return (
-    <div className="video-hot-list">
-      {data.map((item) => (
-        <div key={item.id}>{item.song}</div>
-      ))}
+    <div
+      ref={hoverRef}
+      className="video-hot-list"
+      onMouseEnter={() => {
+        handleChosenDiv("video");
+      }}
+    >
+      {video &&
+        video.data.map((item) => <VideoHotItem key={item.id} item={item} />)}
     </div>
   );
 };

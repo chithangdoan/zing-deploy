@@ -2,10 +2,10 @@ import React from "react";
 import VideoHotLink from "../VideoHotLink";
 import VideoHotList from "../VideoHotList";
 
-const VideoHot = () => (
+const VideoHot = ({ handleChosenDiv }) => (
   <div>
     <VideoHotLink />
-    <VideoHotList />
+    <VideoHotList handleChosenDiv={handleChosenDiv} />
   </div>
 );
 

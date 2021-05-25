@@ -4,7 +4,7 @@ import VideoHotSong from "../VideoHotSong";
 import VideoHotSinger from "../VideoHotSinger";
 
 const VideoHotItem = ({ item }) => (
-  <div>
+  <div >
     <VideoHotPhoto img={item.img} />
     <VideoHotSong song={item.song} />
     <VideoHotSinger singer={item.singer} />

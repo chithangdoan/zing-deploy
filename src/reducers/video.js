@@ -1,34 +1,36 @@
+// constant
 import {
-  FETCH_EN_REQUEST,
-  FETCH_EN_SUCCESS,
-  FETCH_EN_FAILURE,
-} from "../constants/enTypes";
+  FETCH_VIDEO_REQUEST,
+  FETCH_VIDEO_SUCCESS,
+  FETCH_VIDEO_ERROR,
+} from "../constants/api/video";
 
 const initialState = {
   loading: false,
   success: false,
   error: false,
-  data: {},
-  message: "",
+  data: null,
+  message: null,
 };
 
-const enReducers = (state = initialState, action) => {
+const video = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_EN_REQUEST:
+    case FETCH_VIDEO_REQUEST:
       return {
         ...state,
         loading: true,
       };
-    case FETCH_EN_SUCCESS:
+    case FETCH_VIDEO_SUCCESS:
       return {
         ...state,
         loading: false,
         success: true,
-        data: action.payload,
+        data: action.data,
       };
-    case FETCH_EN_FAILURE:
+    case FETCH_VIDEO_ERROR:
       return {
         ...state,
+        loading: false,
         error: true,
         message: action.message,
       };
@@ -37,4 +39,4 @@ const enReducers = (state = initialState, action) => {
   }
 };
 
-export default enReducers;
+export default video;

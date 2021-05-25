@@ -1,34 +1,36 @@
+// constant
 import {
-  FETCH_VI_REQUEST,
-  FETCH_VI_SUCCESS,
-  FETCH_VI_FAILURE,
-} from "../constants/viTypes";
+  FETCH_ALBUM_REQUEST,
+  FETCH_ALBUM_SUCCESS,
+  FETCH_ALBUM_ERROR,
+} from "../constants/api/album";
 
 const initialState = {
   loading: false,
   success: false,
   error: false,
-  data: {},
-  message: "",
+  data: null,
+  message: null,
 };
 
-const viReducers = (state = initialState, action) => {
+const album = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_VI_REQUEST:
+    case FETCH_ALBUM_REQUEST:
       return {
         ...state,
         loading: true,
       };
-    case FETCH_VI_SUCCESS:
+    case FETCH_ALBUM_SUCCESS:
       return {
         ...state,
         loading: false,
         success: true,
-        data: action.payload,
+        data: action.data,
       };
-    case FETCH_VI_FAILURE:
+    case FETCH_ALBUM_ERROR:
       return {
         ...state,
+        loading: false,
         error: true,
         message: action.message,
       };
@@ -37,4 +39,4 @@ const viReducers = (state = initialState, action) => {
   }
 };
 
-export default viReducers;
+export default album;

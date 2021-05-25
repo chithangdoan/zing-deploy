@@ -3,9 +3,9 @@ import React from "react";
 // components
 import Content from "../../components/Content";
 
-const Home = () => (
+const Home = ({ handleChosenDiv }) => (
   <>
-    <Content />
+    <Content handleChosenDiv={handleChosenDiv} />
   </>
 );
 

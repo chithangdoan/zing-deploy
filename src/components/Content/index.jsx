@@ -5,9 +5,9 @@ import ContentInner from "./mains/ContentInner";
 // scss
 import "./style.scss";
 
-const Content = () => (
+const Content = ({ handleChosenDiv }) => (
   <div className="content">
-    <ContentInner />
+    <ContentInner handleChosenDiv={handleChosenDiv} />
   </div>
 );
 

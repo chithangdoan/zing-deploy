@@ -1,13 +1,12 @@
 // libs
 import { combineReducers } from "redux";
-import en from "./enReducers";
-import vi from "./viReducers";
-import lang from "./langReducers";
+// reducers
+import video from "./video";
+import album from "./album";
 
 const reducers = combineReducers({
-  en,
-  vi,
-  lang,
+  video,
+  album,
 });
 
 export default (state, action) => reducers(state, action);
