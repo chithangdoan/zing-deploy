@@ -7,8 +7,8 @@ import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 import { store } from "./store";
 // css
-import "./index.css";
 import "antd/dist/antd.css";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>

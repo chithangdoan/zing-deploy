@@ -1,7 +1,14 @@
-import React from 'react';
+// libs
+import React from "react";
+// components
+import VietSongToolItem from "../VietSongToolItem";
+// scss
+import "./style.scss";
 
-const VietSongSinger = () => {
-  return <div>VietSongSinger</div>;
-};
+const VietSongToolList = () => (
+  <div className="viet-song-tool-list">
+    <VietSongToolItem />
+  </div>
+);
 
-export default VietSongSinger;
+export default VietSongToolList;

@@ -1,6 +1,18 @@
 .rank-number {
-  color: #4a90e2;
-  font-size: 22px;
-
   width: 30px;
+
+  font-size: 22px;
+  color: #1d1b1b;
+}
+
+.top {
+  &-1 {
+    color: red;
+  }
+  &-2 {
+    color: orange;
+  }
+  &-3 {
+    color: green;
+  }
 }

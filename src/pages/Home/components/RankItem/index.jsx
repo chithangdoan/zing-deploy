@@ -7,12 +7,12 @@ import RankToolList from "../RankToolList";
 
 import "./style.scss";
 
-const RankItem = ({ item }) => (
+const RankItem = ({ number, img, song, singer }) => (
   <div className="rank-item">
-    <RankNumber number={item.number} />
+    <RankNumber number={number} />
     <RankDash />
-    <RankImage img={item.img} />
-    <RankTextBox song={item.song} singer={item.singer} />
+    <RankImage img={img} />
+    <RankTextBox song={song} singer={singer} />
     <RankToolList />
   </div>
 );

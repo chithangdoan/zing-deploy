@@ -1,6 +1,9 @@
+// libs
 import React from "react";
-import PartnerList from "../PartnerList";
+// components
 import PartnerTitle from "../PartnerTitle";
+import PartnerList from "../PartnerList";
+// scss
 import "./style.scss";
 
 const Partner = () => (

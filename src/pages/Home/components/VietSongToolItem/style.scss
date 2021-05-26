@@ -1,0 +1,8 @@
+.viet-song-tool-item {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: auto;
+  grid-gap: 10px 10px;
+
+  justify-items: end;
+}

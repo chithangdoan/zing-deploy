@@ -1,7 +1,15 @@
-.week-mv-top1-overlay {
-  background-color: black;
+.week-mv-top-1-overlay {
   position: absolute;
+
+  display: none;
+
   width: 100%;
   height: 100%;
-  opacity: 0.2;
+
+  background: black;
+  opacity: 0.4;
+}
+
+.week-mv-top-1:hover .week-mv-top-1-overlay {
+  display: block;
 }

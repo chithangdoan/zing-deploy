@@ -28,6 +28,7 @@ const usePagination = (name, isHovered) => {
         if (page < 1) {
           setPage(1);
         }
+
         if (page > pageLast) {
           setPage(pageLast);
         }
@@ -44,12 +45,14 @@ const usePagination = (name, isHovered) => {
           setNextDisable(false);
         }
         break;
+
       case "album":
         dispatch(fetchPaginationAlbum(page, 12));
 
         if (page < 1) {
           setPage(1);
         }
+
         if (page > pageLast) {
           setPage(pageLast);
         }
@@ -65,6 +68,7 @@ const usePagination = (name, isHovered) => {
         } else {
           setNextDisable(false);
         }
+
         break;
       default:
         break;
@@ -88,7 +92,7 @@ const usePagination = (name, isHovered) => {
   };
 
   const downHandler = (e) => {
-    if (isHovered && listKeys.indexOf(e.key) > -1) {
+    if (isHovered && listKeys.includes(e.key)) {
       e.preventDefault();
 
       switch (e.key) {

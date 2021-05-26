@@ -1,9 +1,15 @@
 import React from "react";
 import WeekMVTopNItem from "../WeekMVTopNItem";
 
-const WeekMVTopNList = ({ listItemTopN }) => {
-  const renderListItem = listItemTopN.map((item) => (
-    <WeekMVTopNItem key={Math.random()} item={item} />
+const WeekMVTopNList = ({ topN }) => {
+  const renderListItem = topN.map(({ id, img, number, song, singer }) => (
+    <WeekMVTopNItem
+      key={id}
+      img={img}
+      number={number}
+      song={song}
+      singer={singer}
+    />
   ));
 
   return <div>{renderListItem}</div>;
