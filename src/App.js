@@ -16,7 +16,7 @@ import useLocalStorage from "./hooks/use-local-storage";
 // locales
 import { locales } from "./locales";
 // routes
-import { ROUTES, REDIRECTS } from "./routes/AppRoute";
+import { ROUTES, REDIRECTS } from "./routes/appRoute";
 // css
 import "./App.css";
 
