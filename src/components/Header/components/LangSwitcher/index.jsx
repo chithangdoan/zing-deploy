@@ -9,7 +9,7 @@ const LangSwitcher = () => {
     <div className="login-button">
       <select
         className="custom-select"
-        value={lang.locales}
+        value={lang.langCode}
         onChange={(e) => lang.changeLanguage(e.target.value)}
       >
         <option value="en">English</option>

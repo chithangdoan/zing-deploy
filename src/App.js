@@ -58,13 +58,13 @@ const App = () => {
     </Route>
   ));
 
-  const styleLayout = 2;
+  const styleLayout = 1;
 
   const cssRightContent =
     styleLayout === 2 ? "app-content__right" : "app-content__right-full";
 
   return (
-    <LocaleContext.Provider value={{ locales: locales[lang], changeLanguage }}>
+    <LocaleContext.Provider value={{ langCode: lang, locales: locales[lang], changeLanguage }}>
       <div className="wrapper">
         <Router>
           <div className="app">

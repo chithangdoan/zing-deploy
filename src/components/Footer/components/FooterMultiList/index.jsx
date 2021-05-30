@@ -22,8 +22,9 @@ const listItem = [
 
 const FooterMultiList = () => (
   <div className="footer-multi-list">
-    {listItem.map((item) => (
-      <FooterList key={Math.random()} list={item.list} />
+    {listItem.map((item, index) => (
+      // eslint-disable-next-line react/no-array-index-key
+      <FooterList key={index} list={item.list} />
     ))}
   </div>
 );

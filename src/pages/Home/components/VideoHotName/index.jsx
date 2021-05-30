@@ -7,7 +7,8 @@ import "./style.scss";
 
 const VideoHotName = () => {
   const lang = useLocale();
-  return <div className="video-hot-name">{lang.locales.videoHotName}</div>;
+  console.log(lang.locales);
+  return <div className="video-hot-name">{lang.locales.Home.videoHotName}</div>;
 };
 
 export default VideoHotName;

@@ -10,7 +10,7 @@ import useHover from "../../../../hooks/use-hover";
 // css
 import "./style.scss";
 
-const VideoHotList = ({ handleChosenDiv }) => {
+const VideoHotList = () => {
   const [page, setPage] = useState(1);
 
   const dispatch = useDispatch();
@@ -42,13 +42,13 @@ const VideoHotList = ({ handleChosenDiv }) => {
         case "ArrowUp":
         case "PageUp":
           setPage(page + 1);
-          console.log(`page Up = ${page}`);
+
           break;
 
         case "ArrowDown":
         case "PageDown":
           setPage(page - 1);
-          console.log(`page Down = ${page}`);
+
           break;
 
         default:
@@ -66,13 +66,7 @@ const VideoHotList = ({ handleChosenDiv }) => {
   });
 
   return (
-    <div
-      ref={hoverRef}
-      className="video-hot-list"
-      onMouseEnter={() => {
-        handleChosenDiv("video");
-      }}
-    >
+    <div ref={hoverRef} className="video-hot-list">
       {video &&
         video.data.map((item) => <VideoHotItem key={item.id} item={item} />)}
     </div>

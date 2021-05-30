@@ -9,8 +9,6 @@ import "./style.scss";
 const Header = ({
   styleLayout,
   activeHeaderFooterColor,
-  preferredLocale,
-  changeLanguage,
 }) => {
   const css = classNames(
     { header: styleLayout === 1 },
@@ -21,8 +19,6 @@ const Header = ({
     <div className={css}>
       <HeaderInner
         styleLayout={styleLayout}
-        preferredLocale={preferredLocale}
-        changeLanguage={changeLanguage}
       />
     </div>
   );

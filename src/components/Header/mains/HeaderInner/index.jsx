@@ -9,7 +9,7 @@ import LoginButton from "../../components/LoginButton";
 // SCSS
 import "./style.scss";
 
-const HeaderInner = ({ styleLayout, preferredLocale, changeLanguage }) => {
+const HeaderInner = ({ styleLayout }) => {
   const css = styleLayout === 1 ? "header-inner" : "";
   return (
     <div className={css}>
@@ -22,10 +22,7 @@ const HeaderInner = ({ styleLayout, preferredLocale, changeLanguage }) => {
             <SearchBox />
             <MenuPage />
 
-            <LangSwitcher
-              preferredLocale={preferredLocale}
-              changeLanguage={changeLanguage}
-            />
+            <LangSwitcher />
           </div>
           <div className="header-right">
             <LoginButton />
@@ -36,10 +33,7 @@ const HeaderInner = ({ styleLayout, preferredLocale, changeLanguage }) => {
           <HeaderLogo />
           <SearchBox />
           <MenuPage />
-          <LangSwitcher
-            preferredLocale={preferredLocale}
-            changeLanguage={changeLanguage}
-          />
+          <LangSwitcher />
           <LoginButton />
         </>
       )}
