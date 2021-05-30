@@ -1,5 +1,7 @@
+// libs
 import React from "react";
 import classNames from "classnames";
+// scss
 import "./style.scss";
 
 const TopSongItem = ({ item, index, activeIndex, handleMouseEnter }) => {

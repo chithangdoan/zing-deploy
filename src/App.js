@@ -20,8 +20,8 @@ import { ROUTES, REDIRECTS } from "./routes/appRoute";
 // css
 import "./App.css";
 
-const renderRedirect = REDIRECTS.map(({ item, index }) => (
-  <Redirect key={index} from={item.from} to={item.to} />
+const renderRedirect = REDIRECTS.map((item) => (
+  <Redirect key={item.from} from={item.from} to={item.to} />
 ));
 
 const renderPath = ROUTES.map((item) => (
