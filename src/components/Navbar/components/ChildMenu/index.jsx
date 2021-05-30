@@ -7,7 +7,7 @@ import "./style.scss";
 
 const ChildMenu = ({ sub }) => {
   const renderList = sub.map((item) => (
-    <ChildMenuList key={Math.random()} title={item.title} list={item.name} />
+    <ChildMenuList key={item.path} title={item.title} list={item.name} />
   ));
   return <div className="child-menu">{renderList}</div>;
 };

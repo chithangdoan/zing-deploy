@@ -1,8 +1,11 @@
+// libs
 import React from "react";
+// components
 import RankItem from "../RankItem";
+// scss
 import "./style.scss";
 
-const ListItem = [
+const listItem = [
   {
     id: Math.random(),
     number: 1,
@@ -45,10 +48,12 @@ const ListItem = [
   },
 ];
 
-const RenderList = ListItem.map((item) => (
-  <RankItem key={Math.random()} item={item} />
-));
-
-const RankList = () => <div className="rank-list">{RenderList}</div>;
+const RankList = () => (
+  <div className="rank-list">
+    {listItem.map((item) => (
+      <RankItem key={Math.random()} item={item} />
+    ))}
+  </div>
+);
 
 export default RankList;

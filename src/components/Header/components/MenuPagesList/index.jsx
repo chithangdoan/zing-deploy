@@ -5,10 +5,10 @@ import MenuPagesItem from "../MenuPagesItem";
 // SCSS
 import "./style.scss";
 // constant
-import { ROUTES } from "../../../../routes/appRoute";
+import { ROUTES } from "../../../../routes/AppRoute";
 
 const renderList = ROUTES.map((item) => (
-  <MenuPagesItem key={Math.random()} item={item} />
+  <MenuPagesItem key={item.path} item={item} />
 ));
 
 const MenuPagesList = () => <div className="menu-pages-list">{renderList}</div>;

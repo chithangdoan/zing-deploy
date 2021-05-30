@@ -1,5 +1,8 @@
+// libs
 import React from "react";
+// conponents
 import PartnerItem from "../PartnerItem";
+// scss
 import "./style.scss";
 
 const listItem = [
@@ -55,10 +58,12 @@ const listItem = [
   },
 ];
 
-const renderList = listItem.map((item) => (
-  <PartnerItem key={Math.random()} item={item} />
-));
-
-const PartnerList = () => <div className="partner-list">{renderList}</div>;
+const PartnerList = () => (
+  <div className="partner-list">
+    {listItem.map((item) => (
+      <PartnerItem key={Math.random()} item={item} />
+    ))}
+  </div>
+);
 
 export default PartnerList;

@@ -9,15 +9,12 @@ import LoginButton from "../../components/LoginButton";
 // SCSS
 import "./style.scss";
 
-const HeaderInner = ({ preferredLocale, changeLanguage }) => (
+const HeaderInner = () => (
   <div className="header-inner">
     <HeaderLogo />
     <SearchBox />
     <MenuPage />
-    <LangSwitcher
-      preferredLocale={preferredLocale}
-      changeLanguage={changeLanguage}
-    />
+    <LangSwitcher />
     <LoginButton />
   </div>
 );

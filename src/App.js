@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 // components
 import Header from "./components/Header";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 // contexts
 import { LocaleContext } from "./contexts/locale-context";
@@ -17,7 +16,7 @@ import useLocalStorage from "./hooks/use-local-storage";
 // locales
 import { locales } from "./locales";
 // routes
-import { ROUTES, REDIRECTS } from "./routes/appRoute";
+import { ROUTES, REDIRECTS } from "./routes/AppRoute";
 // css
 import "./App.css";
 
@@ -26,12 +25,7 @@ const renderRedirect = REDIRECTS.map((item) => (
 ));
 
 const renderPath = ROUTES.map((item) => (
-  <Route
-    key={Math.random()}
-    component={item.component}
-    path={item.path}
-    exact
-  />
+  <Route key={item.path} component={item.component} path={item.path} exact />
 ));
 
 const App = () => {
@@ -39,16 +33,13 @@ const App = () => {
 
   const changeLanguage = (langCode) => {
     setLang(langCode);
-    // eslint-disable-next-line no-console
-    console.log(langCode);
   };
 
   return (
-    <LocaleContext.Provider value={locales[lang]}>
+    <LocaleContext.Provider value={{ locales: locales[lang], changeLanguage }}>
       <Router className="app">
         <div>
-          <Header preferredLocale={lang} changeLanguage={changeLanguage} />
-          <Navbar />
+          <Header />
           {renderRedirect}
           <Switch>{renderPath}</Switch>
           <Footer />
