@@ -6,34 +6,47 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-
 // components
 import Header from "./components/Header";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+// contexts
+import { LocaleContext } from "./contexts/locale-context";
+// hooks
+import useLocalStorage from "./hooks/use-local-storage";
+// locales
+import { locales } from "./locales";
+// routes
+import { ROUTES, REDIRECTS } from "./routes/AppRoute";
 // css
 import "./App.css";
 
-import { ROUTES, REDIRECTS } from "./routes/appRoute";
+const renderRedirect = REDIRECTS.map(({ item, index }) => (
+  <Redirect key={index} from={item.from} to={item.to} />
+));
 
 const renderPath = ROUTES.map((item) => (
-  <Route path={item.path} component={item.component} exact />
+  <Route key={item.path} component={item.component} path={item.path} exact />
 ));
 
-const renderRedirect = REDIRECTS.map((item) => (
-  <Redirect from={item.from} to={item.to} exact />
-));
+const App = () => {
+  const [lang, setLang] = useLocalStorage("langCode", "en");
 
-const App = () => (
-  <Router>
-    <div>
-      <Header />
-      <Navbar />
-      {renderRedirect}
-      <Switch>{renderPath}</Switch>
-      <Footer />
-    </div>
-  </Router>
-);
+  const changeLanguage = (langCode) => {
+    setLang(langCode);
+  };
+
+  return (
+    <LocaleContext.Provider value={{ locales: locales[lang], changeLanguage }}>
+      <Router className="app">
+        <div>
+          <Header />
+          {renderRedirect}
+          <Switch>{renderPath}</Switch>
+          <Footer />
+        </div>
+      </Router>
+    </LocaleContext.Provider>
+  );
+};
 
 export default App;

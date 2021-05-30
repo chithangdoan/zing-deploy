@@ -20,9 +20,12 @@ const listItem = [
   },
 ];
 
-const renderList = listItem.map((item) => <FooterList list={item.list} />);
 const FooterMultiList = () => (
-  <div className="footer-multi-list">{renderList}</div>
+  <div className="footer-multi-list">
+    {listItem.map((item) => (
+      <FooterList key={Math.random()} list={item.list} />
+    ))}
+  </div>
 );
 
 export default FooterMultiList;

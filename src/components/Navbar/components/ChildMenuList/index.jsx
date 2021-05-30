@@ -6,14 +6,13 @@ import ChildMenuTitle from "../ChildMenuTitle";
 // scss
 import "./style.scss";
 
-const ChildMenuList = ({ title, list }) => {
-  const renderList = list.map((item) => <ChildMenuLink link={item} />);
-  return (
-    <div className="child-menu-list">
-      <ChildMenuTitle title={title} />
-      {renderList}
-    </div>
-  );
-};
+const ChildMenuList = ({ title, list }) => (
+  <div className="child-menu-list">
+    <ChildMenuTitle title={title} />
+    {list.map(({ item, index }) => (
+      <ChildMenuLink key={index} link={item} />
+    ))}
+  </div>
+);
 
 export default ChildMenuList;
