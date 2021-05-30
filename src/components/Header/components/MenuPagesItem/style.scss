@@ -3,9 +3,18 @@
   height: 50px;
   padding: 0 10px;
 
-  background: #000;
+  background: transparent;
   cursor: pointer;
 
   font-size: 14px;
+  text-transform: uppercase;
   color: #fff;
+  &:hover {
+    color: #a845de;
+  }
+}
+
+.active-menu-page {
+  background: #000;
+  color: #a845de;
 }

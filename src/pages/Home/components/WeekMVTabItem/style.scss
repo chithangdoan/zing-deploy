@@ -1,0 +1,16 @@
+.week-mv-tab-item {
+  display: flex;
+  & button {
+    width: 100%;
+    background: #800080;
+    border: #800080;
+    &:hover {
+      background: #ce08ce;
+      border: #800080;
+    }
+  }
+}
+
+.active-week-mv {
+  border-top: 1px solid purple;
+}

@@ -4,18 +4,19 @@ import classNames from "classnames";
 // scss
 import "./style.scss";
 
-const TopSongItem = ({ item, index, activeIndex, handleMouseEnter }) => {
-  const show =
-    activeIndex === index ? { active: true } : { "un-active": false };
+const TopSongItem = ({ item, topSong, activeIndex, handleMouseEnter }) => {
+  const indexHoverSong = topSong.findIndex((song) => song.img === item.img);
 
-  const css = classNames("top-song-img", show);
+  const activeBorder = indexHoverSong === activeIndex;
+
+  const css = classNames("top-song-item", { active: activeBorder });
 
   return (
     <div className={css}>
       <img
-        onMouseEnter={() => handleMouseEnter(item.img, index)}
         alt="top-song-item"
         src={item.img}
+        onMouseEnter={() => handleMouseEnter(item.img)}
       />
     </div>
   );

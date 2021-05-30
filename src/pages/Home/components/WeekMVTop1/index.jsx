@@ -1,18 +1,17 @@
+// libs
 import React from "react";
-import WeekMVTop1Image from "../WeekMVTop1Image";
+// components
 import WeekMVTop1Item from "../WeekMVTop1Item";
 import WeekMVTop1Overlay from "../WeekMVTop1Overlay";
+import WeekMVTop1Play from "../WeekMVTop1Play";
+// scss
 import "./style.scss";
 
-const WeekMVTop1 = ({ itemTop1 }) => (
+const WeekMVTop1 = ({ img, number, song, singer }) => (
   <div className="week-mv-top-1">
-    <WeekMVTop1Image img={itemTop1.img} />
+    <WeekMVTop1Item img={img} number={number} song={song} singer={singer} />
     <WeekMVTop1Overlay />
-    <WeekMVTop1Item
-      number={itemTop1.number}
-      song={itemTop1.song}
-      singer={itemTop1.singer}
-    />
+    <WeekMVTop1Play />
   </div>
 );
 

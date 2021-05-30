@@ -6,9 +6,9 @@ import ContentRight from "../ContentRight";
 // scss
 import "./style.scss";
 
-const ContentTop = () => (
+const ContentTop = ({ handleChosenDiv }) => (
   <div className="content-top">
-    <ContentLeft />
+    <ContentLeft handleChosenDiv={handleChosenDiv} />
     <ContentRight />
   </div>
 );

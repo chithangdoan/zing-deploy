@@ -1,1 +1,0 @@
-export const FETCH_LANG_REQUEST = "FETCH_LANG_REQUEST";

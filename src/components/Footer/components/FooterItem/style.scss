@@ -2,6 +2,11 @@
   margin-bottom: 10px;
   padding: 0 20px;
 
-  font-size: 12px;
-  color: #fff;
+  & a {
+    font-size: 12px;
+    color: #fff;
+    &:hover {
+      color: purple;
+    }
+  }
 }

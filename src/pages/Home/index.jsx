@@ -1,14 +1,14 @@
 // libs
 import React from "react";
 // components
-import ContentInner from "./mains/ContentInner";
+import Content from "../../components/Content";
 // css
 import "./style.scss";
 
-const Home = () => (
-  <div className="Home">
-    <ContentInner />
-  </div>
+const Home = ({ handleChosenDiv }) => (
+  <>
+    <Content handleChosenDiv={handleChosenDiv} />
+  </>
 );
 
 export default Home;

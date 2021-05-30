@@ -9,9 +9,12 @@
     height: 50px;
     padding: 0 10px;
 
-    background: #000;
+    background: transparent;
 
     font-size: 14px;
     color: #fff;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

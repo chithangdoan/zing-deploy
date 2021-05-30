@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 // Hook
 const useKeyPress = (targetKey) => {
   // State for keeping track of whether key is pressed

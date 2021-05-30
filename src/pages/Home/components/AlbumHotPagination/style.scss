@@ -1,0 +1,16 @@
+.album-hot-pagination {
+  display: flex;
+  & > button {
+    background: purple;
+    cursor: pointer;
+
+    outline: 0;
+    border: 0;
+    margin-right: 10px;
+
+    color: #fff;
+    &:hover {
+      background-color: #530d53;
+    }
+  }
+}

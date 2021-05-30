@@ -1,0 +1,11 @@
+.drawer-close {
+  transition: all 0.2s ease-in-out;
+
+  cursor: pointer;
+
+  font-size: 1.5rem;
+  text-align: end;
+  &:hover {
+    color: purple;
+  }
+}

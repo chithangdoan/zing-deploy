@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
 
-const RankSinger = () => <div className="rank-singer">Trịnh Đình Quang</div>;
+const RankSinger = ({ singer }) => <div className="rank-singer">{singer}</div>;
 
 export default RankSinger;

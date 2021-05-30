@@ -1,8 +1,18 @@
 .header-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: auto;
   align-items: center;
 
   margin: 0 auto;
   width: 1000px;
-  height: 50px;
+}
+
+.header-middle {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: auto;
+  justify-content: space-between;
+
+  align-items: center;
 }

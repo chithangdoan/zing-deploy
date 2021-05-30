@@ -1,11 +1,12 @@
+// libs
 import React from "react";
 import { PlayCircleOutlined } from "@ant-design/icons";
+// scss
+import "./style.scss";
 
 const WeekMVLinkPlay = () => (
-  <div>
-    <span>
-      <PlayCircleOutlined style={{ fontSize: "22px", color: "#888" }} />
-    </span>
+  <div className="week-mv-link-play">
+    <PlayCircleOutlined style={{ fontSize: "22px", color: "#888" }} />
   </div>
 );
 

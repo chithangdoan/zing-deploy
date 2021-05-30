@@ -1,11 +1,15 @@
+// libs
 import React from "react";
-import VietSongSinger from "../VietSongSinger";
+// components
 import VietSongSong from "../VietSongSong";
+import VietSongSinger from "../VietSongSinger";
+// scss
+import "./style.scss";
 
-const VietSongTextBox = () => (
-  <div>
-    <VietSongSong />
-    <VietSongSinger />
+const VietSongTextBox = ({ item }) => (
+  <div className="viet-song-text-box">
+    <VietSongSong song={item.song} />
+    <VietSongSinger singer={item.singer} />
   </div>
 );
 

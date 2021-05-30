@@ -1,6 +1,9 @@
+// libs
 import React from "react";
+// components
 import VietSongLeft from "../VietSongLeft";
 import VietSongRight from "../VietSongRight";
+// scss
 import "./style.scss";
 
 const VietSong = () => (

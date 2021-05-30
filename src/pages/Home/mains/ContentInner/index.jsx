@@ -6,9 +6,9 @@ import ContentBottom from "../../components/ContentBottom";
 // scss
 import "./style.scss";
 
-const ContentInner = () => (
+const ContentInner = ({ handleChosenDiv }) => (
   <div className="content-inner">
-    <ContentTop />
+    <ContentTop handleChosenDiv={handleChosenDiv} />
     <ContentBottom />
   </div>
 );

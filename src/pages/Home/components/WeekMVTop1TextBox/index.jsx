@@ -1,6 +1,9 @@
+// libs
 import React from "react";
+// components
 import WeekMVTop1Song from "../WeekMVTop1Song";
 import WeekMVTop1Singer from "../WeekMVTop1Singer";
+// scss
 import "./style.scss";
 
 const WeekMVTop1TextBox = ({ song, singer }) => (

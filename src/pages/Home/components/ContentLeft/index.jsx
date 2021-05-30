@@ -9,13 +9,13 @@ import TopSong from "../TopSong";
 import VideoHot from "../VideoHot";
 import VietSong from "../VietSong";
 
-const ContentLeft = () => (
+const ContentLeft = ({ handleChosenDiv }) => (
   <div className="content-left">
     <TopSong />
     <RankList />
     <ChangeBox />
-    <VideoHot />
-    <AlbumHot />
+    <VideoHot handleChosenDiv={handleChosenDiv} />
+    <AlbumHot handleChosenDiv={handleChosenDiv} />
     <VietSong />
     <HotArtist />
   </div>

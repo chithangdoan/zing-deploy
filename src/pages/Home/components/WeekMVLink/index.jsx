@@ -7,12 +7,12 @@ import "./style.scss";
 
 const WeekMVLink = () => (
   <div className="week-mv-link">
-    <div>
+    <div className="week-mv-left">
       <WeekMVLinkName />
       <WeekMVLinkIcon />
     </div>
 
-    <div>
+    <div className="week-mv-right">
       <WeekMVLinkPlay />
     </div>
   </div>

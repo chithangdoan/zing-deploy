@@ -3,10 +3,10 @@ import WeekMVTopNItemLeft from "../WeekMVTopNItemLeft";
 import WeekMVTopNItemRight from "../WeekMVTopNItemRight";
 import "./style.scss";
 
-const WeekMVTopNItem = ({ item }) => (
+const WeekMVTopNItem = ({ img, number, song, singer }) => (
   <div className="week-mv-top-n-item">
-    <WeekMVTopNItemLeft img={item.img} number={item.number} />
-    <WeekMVTopNItemRight song={item.song} singer={item.singer} />
+    <WeekMVTopNItemLeft img={img} number={number} />
+    <WeekMVTopNItemRight song={song} singer={singer} />
   </div>
 );
 

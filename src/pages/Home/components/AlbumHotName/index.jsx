@@ -7,6 +7,6 @@ import "./style.scss";
 
 const AlbumHotName = () => {
   const lang = useLocale();
-  return <div className="album-hot-name">{lang.Home.albumHotName}</div>;
+  return <div className="album-hot-name">{lang.locales.albumHotName}</div>;
 };
 export default AlbumHotName;

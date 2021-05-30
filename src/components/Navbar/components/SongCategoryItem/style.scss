@@ -4,10 +4,14 @@
   line-height: 50px;
   &:hover {
     background: white;
+    color: purple;
   }
-  &:hover .child-menu {
+  &:hover .child-menu-wrapper {
+    display: block;
+
     width: max-content;
     height: max-content;
-    opacity: 1;
+
+    color: black;
   }
 }

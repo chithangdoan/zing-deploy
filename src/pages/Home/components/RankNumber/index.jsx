@@ -1,15 +1,23 @@
+// libs
 import React from "react";
-import PropTypes from "prop-types";
+import classNames from "classnames";
+// scss
 import "./style.scss";
 
-const RankNumber = ({ number }) => <div className="rank-number">{number}</div>;
+const RankNumber = ({ number }) => {
+  const colorTop = (number) => {
+    const top = {
+      1: "top-1",
+      2: "top-2",
+      3: "top-3",
+    };
 
-RankNumber.propTypes = {
-  number: PropTypes.number,
-};
+    return top[number] || "";
+  };
 
-RankNumber.defaultProps = {
-  number: 1,
+  const cssColor = classNames(["rank-number", colorTop(number)]);
+
+  return <div className={cssColor}>{number}</div>;
 };
 
 export default RankNumber;

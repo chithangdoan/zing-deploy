@@ -1,42 +1,17 @@
+// libs
 import React from "react";
+// components
 import VietSongItem from "../VietSongItem";
+// mocks
+import { vietSong } from "../../../../mocks/Home/vietSong";
+// scss
 import "./style.scss";
 
-// const listItem = [
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/c/b/4/d/cb4da5c33ee15a4f41d06793b16f4b55.jpg",
-//     song: "Vẫn Luôn Chờ Em",
-//     singer: "Tường Duy,TRUNKY",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/c/b/4/d/cb4da5c33ee15a4f41d06793b16f4b55.jpg",
-//     song: "Vẫn Luôn Chờ Em",
-//     singer: "Tường Duy,TRUNKY",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/c/b/4/d/cb4da5c33ee15a4f41d06793b16f4b55.jpg",
-//     song: "Vẫn Luôn Chờ Em",
-//     singer: "Tường Duy,TRUNKY",
-//   },
-//   {
-//     id: Math.random(),
-//     img:
-//       "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/c/b/4/d/cb4da5c33ee15a4f41d06793b16f4b55.jpg",
-//     song: "Vẫn Luôn Chờ Em",
-//     singer: "Tường Duy,TRUNKY",
-//   },
-// ];
-
+const renderList = vietSong.map((item) => (
+  <VietSongItem key={item.id} item={item} />
+));
 const VietSongNewList = () => (
-  <div className="viet-song-new-list">
-    <VietSongItem />
-  </div>
+  <div className="viet-song-new-list">{renderList}</div>
 );
 
 export default VietSongNewList;

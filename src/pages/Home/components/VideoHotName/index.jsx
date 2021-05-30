@@ -1,13 +1,13 @@
 // Libs
-import React, { useContext } from "react";
-// context
-import { LocaleContext } from "../../../../contexts/locale-context";
+import React from "react";
+// hooks
+import useLocale from "../../../../hooks/useLocale";
 // css
 import "./style.scss";
 
 const VideoHotName = () => {
-  const lang = useContext(LocaleContext);
-  return <div className="video-hot-name">{lang.Home.videoHotName}</div>;
+  const lang = useLocale();
+  return <div className="video-hot-name">{lang.locales.videoHotName}</div>;
 };
 
 export default VideoHotName;
