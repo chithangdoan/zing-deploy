@@ -1,13 +1,16 @@
+// libs
 import React from "react";
+// components
 import TopSongItem from "../TopSongItem";
+// scss
 import "./style.scss";
 
-const TopSongList = ({ listItem, activeIndex, handleMouseEnter }) => {
-  const RenderList = listItem.map((item, index) => (
+const TopSongList = ({ topSong, activeIndex, handleMouseEnter }) => {
+  const RenderList = topSong.map((item) => (
     <TopSongItem
       key={Math.random()}
       item={item}
-      index={index}
+      topSong={topSong}
       activeIndex={activeIndex}
       handleMouseEnter={handleMouseEnter}
     />

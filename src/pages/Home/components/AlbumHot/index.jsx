@@ -8,7 +8,7 @@ import React from "react";
 import AlbumHotTop from "../AlbumHotTop";
 import AlbumHotList from "../AlbumHotList";
 // hooks
-import usePagination from "../../../../hooks/use-pagination";
+import usePagination from "../../../../hooks/usePagination";
 import useHover from "../../../../hooks/use-hover";
 
 const AlbumHot = ({ handleChosenDiv }) => {

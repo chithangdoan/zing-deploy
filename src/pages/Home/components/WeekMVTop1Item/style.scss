@@ -1,11 +1,13 @@
 .week-mv-top-1-item {
   position: absolute;
 
-  width: 100%;
-  height: 100%;
-
   display: grid;
   grid-template-columns: 50px auto;
   grid-template-rows: auto;
-  align-items: center;
+  align-items: end;
+
+  padding-left: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 100%;
 }

@@ -1,0 +1,6 @@
+.week-mv-top-n-list {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: repeat(9, auto);
+  grid-gap: 10px 0;
+}

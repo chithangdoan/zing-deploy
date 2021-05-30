@@ -1,0 +1,75 @@
+.app {
+  display: grid;
+  grid-template-columns: max-content;
+  grid-template-rows: repeat(2, max-content);
+
+  width: 100vw;
+
+  font-family: "Roboto", sans-serif;
+
+  &-top,
+  &-bottom {
+    width: 100vw;
+  }
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: auto;
+    grid-gap: 0 5px;
+
+    &__left {
+      width: 30vw;
+      overflow: hidden;
+    }
+
+    &__right {
+      width: 70vw;
+      overflow: hidden;
+    }
+
+    &__right-full {
+      width: 100vw;
+      overflow: hidden;
+    }
+  }
+}
+
+.app-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.wrapper {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-logo {
+    animation: app-logo-spin infinite 20s linear;
+  }
+}
+
+.app-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.app-link {
+  color: #000;
+}
+
+@keyframes app-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

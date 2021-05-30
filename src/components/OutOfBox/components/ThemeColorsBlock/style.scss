@@ -1,0 +1,29 @@
+.theme-colors-block {
+  margin: 0 auto;
+
+  box-shadow: #00000026 1.95px 1.95px 2.6px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+}
+
+.black {
+  background-color: #2d3436;
+}
+
+.pink {
+  background-color: #e84393;
+}
+
+.theme-colors-wrapper {
+  margin-right: 10px;
+  width: max-content;
+}
+
+.theme-colors-name {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+}

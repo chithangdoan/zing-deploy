@@ -4,12 +4,14 @@ import React from "react";
 import VideoHotTop from "../VideoHotTop";
 import VideoHotList from "../VideoHotList";
 // hooks
-import usePagination from "../../../../hooks/use-pagination";
+import usePagination from "../../../../hooks/usePagination";
 import useHover from "../../../../hooks/use-hover";
 
 const VideoHot = ({ handleChosenDiv }) => {
   const video = "video";
   const [hoverRef, isHovered] = useHover(null);
+
+
   const [
     data,
     clickPreviousHandler,

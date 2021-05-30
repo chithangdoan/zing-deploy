@@ -1,0 +1,9 @@
+.controls {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: end;
+  align-items: center;
+
+  height: 100vh;
+}

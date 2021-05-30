@@ -1,14 +1,25 @@
 const songs = (name) => {
   const arr = [];
-  for (let index = 0; index < 10; index += 1) {
-    const temp = {
+
+  const firstTemp = {
+    id: Math.random(),
+    img: "http://dummyimage.com/300x150.png/95a5a6/ffffff",
+    number: 1,
+    song: `Song ${1} ${name}`,
+    singer: `Singer ${1}`,
+  };
+
+  arr.push(firstTemp);
+
+  for (let index = 2; index <= 10; index += 1) {
+    const nTemp = {
       id: Math.random(),
-      img: "http://dummyimage.com/300x150.png/2980b9/ffffff",
+      img: "http://dummyimage.com/150x150.png/8e44ad/ffffff",
       number: index,
       song: `Song ${index} ${name}`,
       singer: `Singer ${index}`,
     };
-    arr.push(temp);
+    arr.push(nTemp);
   }
   return arr;
 };

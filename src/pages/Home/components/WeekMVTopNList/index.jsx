@@ -1,18 +1,15 @@
+// libs
 import React from "react";
+// components
 import WeekMVTopNItem from "../WeekMVTopNItem";
+// scss
+import "./style.scss";
 
-const WeekMVTopNList = ({ topN }) => {
-  const renderListItem = topN.map(({ id, img, number, song, singer }) => (
-    <WeekMVTopNItem
-      key={id}
-      img={img}
-      number={number}
-      song={song}
-      singer={singer}
-    />
+const WeekMVTopNList = ({ topNListWeekMV }) => {
+  const renderList = topNListWeekMV.map(({ img, number, song, singer }) => (
+    <WeekMVTopNItem img={img} number={number} song={song} singer={singer} />
   ));
-
-  return <div>{renderListItem}</div>;
+  return <div className="week-mv-top-n-list">{renderList}</div>;
 };
 
 export default WeekMVTopNList;

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 // components
 import WeekMVLink from "../WeekMVLink";
-import WeekMVTabList from "../WeekMVTabList";
+// import WeekMVTabList from "../WeekMVTabList";
 import WeekMVList from "../WeekMVList";
 // mocks
 import { tabMenuWeekMV, listSongsWeekMV } from "../../../../mocks/Home/weekMV";
@@ -24,12 +24,12 @@ const WeekMV = () => {
   return (
     <div className="week-mv">
       <WeekMVLink />
-      <WeekMVTabList
+      <WeekMVList
         tabsName={tabMenuWeekMV}
         currentTab={currentTab}
         handleSongs={handleSongs}
+        currentSongs={currentSongs}
       />
-      <WeekMVList currentSongs={currentSongs} />
     </div>
   );
 };

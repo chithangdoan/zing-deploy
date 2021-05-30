@@ -4,13 +4,14 @@
   left: 0;
 
   display: flex;
+
   z-index: 10;
 
-  width: 0;
-  height: 0;
   padding: 15px;
 
   background: #fff;
+}
 
-  opacity: 0;
+.child-menu-wrapper {
+  display: none;
 }

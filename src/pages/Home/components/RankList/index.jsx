@@ -3,11 +3,11 @@ import React from "react";
 // components
 import RankItem from "../RankItem";
 // mocks
-import { rank } from "../../../../mocks/Home/rank";
+import { topSong } from "../../../../mocks/Home/topSong";
 // scss
 import "./style.scss";
 
-const renderList = rank.map(({ number, img, song, singer }) => (
+const renderList = topSong.map(({ number, img, song, singer }) => (
   <RankItem
     key={Math.random()}
     number={number}

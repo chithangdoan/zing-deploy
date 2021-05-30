@@ -6,7 +6,7 @@ import "./style.scss";
 
 const UploadButton = () => (
   <div className="upload-button">
-    <CloudUploadOutlined style={{ fontSize: "22px" }} />
+    <CloudUploadOutlined style={{ fontSize: "22px", color: "purple" }} />
   </div>
 );
 
