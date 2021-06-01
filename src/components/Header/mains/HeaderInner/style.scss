@@ -1,11 +1,17 @@
-.header-inner {
+.header-inner-inline {
   display: grid;
+
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: auto;
+  justify-content: space-between;
   align-items: center;
+
+  transition: all 1s ease-in-out;
 
   margin: 0 auto;
   width: 1000px;
+}
+.header-inner {
 }
 
 .header-middle {

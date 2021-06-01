@@ -6,7 +6,7 @@ import { fetchPaginationVideo } from "../../../../actions/video";
 // components
 import VideoHotItem from "../VideoHotItem";
 // hooks
-import useHover from "../../../../hooks/use-hover";
+import useHover from "../../../../hooks/useHover";
 // css
 import "./style.scss";
 

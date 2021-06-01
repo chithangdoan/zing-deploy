@@ -9,6 +9,7 @@
 
   &-top,
   &-bottom {
+    transition: all 2s ease-in-out;
     width: 100vw;
   }
   &-content {
@@ -18,16 +19,19 @@
     grid-gap: 0 5px;
 
     &__left {
+      transition: all 2s ease-in-out;
       width: 30vw;
       overflow: hidden;
     }
 
     &__right {
+      transition: all 2s ease-in-out;
       width: 70vw;
       overflow: hidden;
     }
 
     &__right-full {
+      transition: all 2s ease-in-out;
       width: 100vw;
       overflow: hidden;
     }

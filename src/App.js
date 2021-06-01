@@ -14,7 +14,7 @@ import OutOfBox from "./components/OutOfBox";
 // contexts
 import { LocaleContext } from "./contexts/locale-context";
 // hooks
-import useLocalStorage from "./hooks/use-local-storage";
+import useLocalStorage from "./hooks/useLocalStorage";
 // locales
 import { locales } from "./locales";
 // routes
@@ -60,21 +60,48 @@ const App = () => {
 
   const styleLayout = 1;
 
-  const cssRightContent =
-    styleLayout === 2 ? "app-content__right" : "app-content__right-full";
+  const listStyleButtons = [
+    {
+      id: Math.random(),
+      name: "style-1",
+    },
+    {
+      id: Math.random(),
+      name: "style-2",
+    },
+    {
+      id: Math.random(),
+      name: "style-3",
+    },
+  ];
+
+  const [activeStyleButton, setActiveStyleButton] = useState(
+    listStyleButtons[0].name
+  );
+
+  const handleClickStyleButton = (nameButton) => {
+    setActiveStyleButton(nameButton);
+  };
 
   return (
-    <LocaleContext.Provider value={{ langCode: lang, locales: locales[lang], changeLanguage }}>
+    <LocaleContext.Provider
+      value={{
+        langCode: lang,
+        locales: locales[lang],
+        changeLanguage,
+        listStyleButtons,
+        activeStyleButton,
+        handleClickStyleButton,
+      }}
+    >
       <div className="wrapper">
         <Router>
           <div className="app">
-            {styleLayout === 1 ? (
+            {activeStyleButton === "style-1" ||
+            activeStyleButton === "style-3" ? (
               <div className="app-top">
-                <Header
-                  styleLayout={styleLayout}
-                  activeHeaderFooterColor={activeHeaderFooterColor}
-                />
-                <Navbar styleLayout={styleLayout} />
+                <Header activeHeaderFooterColor={activeHeaderFooterColor} />
+                <Navbar />
               </div>
             ) : (
               ""
@@ -82,7 +109,8 @@ const App = () => {
 
             <div className="app-bottom">
               <div className="app-content">
-                {styleLayout === 2 ? (
+                {activeStyleButton === "style-2" ||
+                activeStyleButton === "style-3" ? (
                   <div className="app-content__left">
                     <Header
                       styleLayout={styleLayout}
@@ -95,7 +123,13 @@ const App = () => {
                   ""
                 )}
 
-                <div className={cssRightContent}>
+                <div
+                  className={
+                    activeStyleButton === "style-1"
+                      ? "app-content__right-full"
+                      : "app-content__right"
+                  }
+                >
                   {renderRedirect}
                   <Switch>{renderPath}</Switch>
                 </div>

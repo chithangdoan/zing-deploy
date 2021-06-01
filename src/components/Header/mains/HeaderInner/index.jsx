@@ -1,19 +1,33 @@
 // Libs
 import React from "react";
+import classNames from "classnames";
 // Components
 import HeaderLogo from "../../components/HeaderLogo";
 import SearchBox from "../../components/SearchBox";
 import MenuPage from "../../components/MenuPagesList";
 import LangSwitcher from "../../components/LangSwitcher";
 import LoginButton from "../../components/LoginButton";
+// hooks
+import useLocale from "../../../../hooks/useLocale";
 // SCSS
 import "./style.scss";
 
-const HeaderInner = ({ styleLayout }) => {
-  const css = styleLayout === 1 ? "header-inner" : "";
+const HeaderInner = () => {
+  const styleButton = useLocale();
+  console.log(styleButton.activeStyleButton);
+
+  const css = classNames(
+    {
+      "header-inner-inline": styleButton.activeStyleButton === "style-1",
+    },
+    {
+      "header-inner": styleButton.activeStyleButton !== "style-1",
+    }
+  );
+
   return (
     <div className={css}>
-      {styleLayout === 1 ? (
+      {styleButton.activeStyleButton === "style-1" ? (
         <>
           <div className="header-left">
             <HeaderLogo />

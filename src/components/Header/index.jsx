@@ -3,23 +3,21 @@ import React from "react";
 import classNames from "classnames";
 // Components
 import HeaderInner from "./mains/HeaderInner";
+// hooks
+import useLocale from "../../hooks/useLocale";
 // SCSS
 import "./style.scss";
 
-const Header = ({
-  styleLayout,
-  activeHeaderFooterColor,
-}) => {
+const Header = ({ activeHeaderFooterColor }) => {
+  const active = useLocale();
   const css = classNames(
-    { header: styleLayout === 1 },
+    { header: active.activeStyleButton === "style-1" },
     activeHeaderFooterColor
   );
 
   return (
     <div className={css}>
-      <HeaderInner
-        styleLayout={styleLayout}
-      />
+      <HeaderInner />
     </div>
   );
 };

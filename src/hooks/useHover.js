@@ -1,7 +1,6 @@
-// Hook
-import { useState, useCallback, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 
-export default function useHover() {
+const useHover = () => {
   const [value, setValue] = useState(false);
 
   // Wrap in useCallback so we can use in dependencies below
@@ -34,4 +33,6 @@ export default function useHover() {
   );
 
   return [callbackRef, value];
-}
+};
+
+export default useHover;
