@@ -14,7 +14,6 @@ import "./style.scss";
 
 const HeaderInner = () => {
   const styleButton = useLocale();
-  console.log(styleButton.activeStyleButton);
 
   const css = classNames(
     {
@@ -43,13 +42,13 @@ const HeaderInner = () => {
           </div>
         </>
       ) : (
-        <>
+        <div className={css}>
           <HeaderLogo />
           <SearchBox />
           <MenuPage />
           <LangSwitcher />
           <LoginButton />
-        </>
+        </div>
       )}
     </div>
   );

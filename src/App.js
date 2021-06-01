@@ -97,31 +97,36 @@ const App = () => {
       <div className="wrapper">
         <Router>
           <div className="app">
-            {activeStyleButton === "style-1" ||
-            activeStyleButton === "style-3" ? (
-              <div className="app-top">
-                <Header activeHeaderFooterColor={activeHeaderFooterColor} />
-                <Navbar />
-              </div>
-            ) : (
-              ""
-            )}
+            <div
+              className={
+                activeStyleButton === "style-1"
+                  ? "app-content__top-full"
+                  : "app-content__top"
+              }
+            >
+              <Header activeHeaderFooterColor={activeHeaderFooterColor} />
+              <Navbar />
+            </div>
 
             <div className="app-bottom">
               <div className="app-content">
-                {activeStyleButton === "style-2" ||
-                activeStyleButton === "style-3" ? (
-                  <div className="app-content__left">
-                    <Header
-                      styleLayout={styleLayout}
-                      activeHeaderFooterColor={activeHeaderFooterColor}
-                    />
-
+                <div
+                  className={
+                    activeStyleButton !== "style-1"
+                      ? "app-content__left-full"
+                      : "app-content__left"
+                  }
+                >
+                  <Header
+                    styleLayout={styleLayout}
+                    activeHeaderFooterColor={activeHeaderFooterColor}
+                  />
+                  {activeStyleButton !== "style-1" ? (
                     <Navbar styleLayout={styleLayout} />
-                  </div>
-                ) : (
-                  ""
-                )}
+                  ) : (
+                    ""
+                  )}
+                </div>
 
                 <div
                   className={
