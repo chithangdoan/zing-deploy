@@ -10,6 +10,7 @@ import "./style.scss";
 
 const Header = ({ activeHeaderFooterColor }) => {
   const active = useLocale();
+  
   const css = classNames(
     { "header__style-1": active.activeStyleButton === "style-1" },
     { "header__style-2": active.activeStyleButton === "style-2" },
