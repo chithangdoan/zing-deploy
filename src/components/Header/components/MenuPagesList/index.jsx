@@ -17,11 +17,15 @@ const MenuPagesList = () => {
     setActiveMenuPage(page);
   };
 
-  const styleButton = useLocale();
+  const { activeStyleButton } = useLocale();
 
-  const css = classNames({
-    "menu-pages-list__style-1": styleButton.activeStyleButton === "style-1",
-  });
+  const themeStyle = {
+    "style-1": "menu-pages-list__style-1",
+    "style-2": "menu-pages-list__style-2",
+    "style-3": "menu-pages-list__style-3",
+  };
+
+  const css = classNames(themeStyle[activeStyleButton]);
 
   const renderList = ROUTES.map(({ name, path }) => (
     <MenuPagesItem

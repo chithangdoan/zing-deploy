@@ -9,16 +9,21 @@ import useLocale from "../../hooks/useLocale";
 import "./style.scss";
 
 const Header = ({ activeHeaderFooterColor }) => {
-  const active = useLocale();
-  
-  const css = classNames(
-    { "header__style-1": active.activeStyleButton === "style-1" },
-    { "header__style-2": active.activeStyleButton === "style-2" },
-    activeHeaderFooterColor
-  );
+  const { activeStyleButton } = useLocale();
+
+  const themeStyle = {
+    "style-1": "header__style-1",
+    "style-2": "header__style-2",
+    "style-3": "header__style-3",
+  };
+
+  const className = classNames([
+    themeStyle[activeStyleButton],
+    activeHeaderFooterColor,
+  ]);
 
   return (
-    <div className={css}>
+    <div className={className}>
       <HeaderInner />
     </div>
   );
