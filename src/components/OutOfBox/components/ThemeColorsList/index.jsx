@@ -13,7 +13,12 @@ const ThemeColors = ({ listColors, handleClickHeaderFooterColor }) => {
       handleClickHeaderFooterColor={handleClickHeaderFooterColor}
     />
   ));
-  return <div className="theme-colors">{render}</div>;
+  return (
+    <div className="theme-colors">
+      <h3>Colors:</h3>
+      <div className="theme-colors-inner">{render}</div>
+    </div>
+  );
 };
 
 export default ThemeColors;

@@ -1,11 +1,14 @@
 // Libs
 import React, { useState } from "react";
+import classNames from "classnames";
 // Components
 import MenuPagesItem from "../MenuPagesItem";
-// SCSS
-import "./style.scss";
 // constant
 import { ROUTES } from "../../../../routes/appRoute";
+// hooks
+import useLocale from "../../../../hooks/useLocale";
+// SCSS
+import "./style.scss";
 
 const MenuPagesList = () => {
   const [activeMenuPage, setActiveMenuPage] = useState(ROUTES[0].name);
@@ -13,6 +16,16 @@ const MenuPagesList = () => {
   const handleChangeMenuPage = (page) => {
     setActiveMenuPage(page);
   };
+
+  const { activeStyleButton } = useLocale();
+
+  const themeStyle = {
+    "style-1": "menu-pages-list__style-1",
+    "style-2": "menu-pages-list__style-2",
+    "style-3": "menu-pages-list__style-3",
+  };
+
+  const css = classNames(themeStyle[activeStyleButton]);
 
   const renderList = ROUTES.map(({ name, path }) => (
     <MenuPagesItem
@@ -24,7 +37,7 @@ const MenuPagesList = () => {
     />
   ));
 
-  return <div className="menu-pages-list">{renderList}</div>;
+  return <div className={css}>{renderList}</div>;
 };
 
 export default MenuPagesList;

@@ -2,11 +2,13 @@
 import React from "react";
 // hooks
 import useLocale from "../../../../hooks/useLocale";
+// scss
+import "./style.scss";
 
 const LangSwitcher = () => {
   const lang = useLocale();
   return (
-    <div className="login-button">
+    <div className="lang-switcher">
       <select
         className="custom-select"
         value={lang.langCode}

@@ -13,21 +13,19 @@ import useLocale from "../../../../hooks/useLocale";
 import "./style.scss";
 
 const HeaderInner = () => {
-  const styleButton = useLocale();
-  console.log(styleButton.activeStyleButton);
+  const { activeStyleButton } = useLocale();
 
-  const css = classNames(
-    {
-      "header-inner-inline": styleButton.activeStyleButton === "style-1",
-    },
-    {
-      "header-inner": styleButton.activeStyleButton !== "style-1",
-    }
-  );
+  const themeStyle = {
+    "style-1": "header-inner-inline",
+    "style-2": "header-inner",
+    "style-3": "header-inner",
+  };
+
+  const className = classNames([themeStyle[activeStyleButton]]);
 
   return (
-    <div className={css}>
-      {styleButton.activeStyleButton === "style-1" ? (
+    <div className={className}>
+      {activeStyleButton === "style-1" ? (
         <>
           <div className="header-left">
             <HeaderLogo />
@@ -43,13 +41,13 @@ const HeaderInner = () => {
           </div>
         </>
       ) : (
-        <>
+        <div className={className}>
           <HeaderLogo />
           <SearchBox />
           <MenuPage />
           <LangSwitcher />
           <LoginButton />
-        </>
+        </div>
       )}
     </div>
   );

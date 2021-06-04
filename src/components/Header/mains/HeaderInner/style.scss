@@ -6,12 +6,15 @@
   justify-content: space-between;
   align-items: center;
 
-  transition: all 1s ease-in-out;
-
   margin: 0 auto;
   width: 1000px;
 }
 .header-inner {
+  display: grid;
+
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 15px 0;
 }
 
 .header-middle {

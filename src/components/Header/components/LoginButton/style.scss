@@ -1,20 +1,41 @@
 .login-button {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  justify-items: end;
+  &__style-1 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: end;
+    & button {
+      border: 0;
+      height: 50px;
+      padding: 0 10px;
 
-  & button {
-    border: 0;
-    height: 50px;
-    padding: 0 10px;
+      background: transparent;
+      cursor: pointer;
 
-    background: transparent;
+      font-size: 14px;
+      color: #fff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 
-    font-size: 14px;
-    color: #fff;
-    &:hover {
-      text-decoration: underline;
+  &__style-2 {
+    & button {
+      border: 0;
+      width: 95%;
+      padding: 10px 0;
+
+      background: purple;
+      cursor: pointer;
+
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

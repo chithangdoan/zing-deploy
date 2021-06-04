@@ -58,7 +58,23 @@ const App = () => {
     </Route>
   ));
 
-  const styleLayout = 1;
+  const themeLayout = {
+    "app-content-top": {
+      "style-1": "app-content__top-full",
+      "style-2": "app-content__top",
+      "style-3": "app-content__top",
+    },
+    "app-content-left": {
+      "style-1": "app-content__left",
+      "style-2": "app-content__left-full",
+      "style-3": "app-content__left-full",
+    },
+    "app-content-right": {
+      "style-1": "app-content__right-full",
+      "style-2": "app-content__right",
+      "style-3": "app-content__right",
+    },
+  };
 
   const listStyleButtons = [
     {
@@ -97,37 +113,23 @@ const App = () => {
       <div className="wrapper">
         <Router>
           <div className="app">
-            {activeStyleButton === "style-1" ||
-            activeStyleButton === "style-3" ? (
-              <div className="app-top">
-                <Header activeHeaderFooterColor={activeHeaderFooterColor} />
-                <Navbar />
-              </div>
-            ) : (
-              ""
-            )}
+            <div className={themeLayout["app-content-top"][activeStyleButton]}>
+              <Header activeHeaderFooterColor={activeHeaderFooterColor} />
+              <Navbar />
+            </div>
 
             <div className="app-bottom">
               <div className="app-content">
-                {activeStyleButton === "style-2" ||
-                activeStyleButton === "style-3" ? (
-                  <div className="app-content__left">
-                    <Header
-                      styleLayout={styleLayout}
-                      activeHeaderFooterColor={activeHeaderFooterColor}
-                    />
-
-                    <Navbar styleLayout={styleLayout} />
-                  </div>
-                ) : (
-                  ""
-                )}
+                <div
+                  className={themeLayout["app-content-left"][activeStyleButton]}
+                >
+                  <Header activeHeaderFooterColor={activeHeaderFooterColor} />
+                  {activeStyleButton !== "style-1" ? <Navbar /> : ""}
+                </div>
 
                 <div
                   className={
-                    activeStyleButton === "style-1"
-                      ? "app-content__right-full"
-                      : "app-content__right"
+                    themeLayout["app-content-right"][activeStyleButton]
                   }
                 >
                   {renderRedirect}
