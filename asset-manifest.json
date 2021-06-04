@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/zing-deploy/static/css/main.55e7838a.chunk.css",
-    "main.js": "/zing-deploy/static/js/main.cbb88350.chunk.js",
-    "main.js.map": "/zing-deploy/static/js/main.cbb88350.chunk.js.map",
-    "runtime-main.js": "/zing-deploy/static/js/runtime-main.df0a331c.js",
-    "runtime-main.js.map": "/zing-deploy/static/js/runtime-main.df0a331c.js.map",
-    "static/css/2.00bb4513.chunk.css": "/zing-deploy/static/css/2.00bb4513.chunk.css",
-    "static/js/2.07da94d9.chunk.js": "/zing-deploy/static/js/2.07da94d9.chunk.js",
-    "static/js/2.07da94d9.chunk.js.map": "/zing-deploy/static/js/2.07da94d9.chunk.js.map",
-    "static/js/3.494aabc3.chunk.js": "/zing-deploy/static/js/3.494aabc3.chunk.js",
-    "static/js/3.494aabc3.chunk.js.map": "/zing-deploy/static/js/3.494aabc3.chunk.js.map",
+    "main.css": "/zing-deploy/static/css/main.5208dd7b.chunk.css",
+    "main.js": "/zing-deploy/static/js/main.f768ace2.chunk.js",
+    "main.js.map": "/zing-deploy/static/js/main.f768ace2.chunk.js.map",
+    "runtime-main.js": "/zing-deploy/static/js/runtime-main.0b359bbd.js",
+    "runtime-main.js.map": "/zing-deploy/static/js/runtime-main.0b359bbd.js.map",
+    "static/css/2.c02757eb.chunk.css": "/zing-deploy/static/css/2.c02757eb.chunk.css",
+    "static/js/2.45c6a765.chunk.js": "/zing-deploy/static/js/2.45c6a765.chunk.js",
+    "static/js/2.45c6a765.chunk.js.map": "/zing-deploy/static/js/2.45c6a765.chunk.js.map",
+    "static/js/3.3f6951f9.chunk.js": "/zing-deploy/static/js/3.3f6951f9.chunk.js",
+    "static/js/3.3f6951f9.chunk.js.map": "/zing-deploy/static/js/3.3f6951f9.chunk.js.map",
     "index.html": "/zing-deploy/index.html",
-    "static/css/2.00bb4513.chunk.css.map": "/zing-deploy/static/css/2.00bb4513.chunk.css.map",
-    "static/css/main.55e7838a.chunk.css.map": "/zing-deploy/static/css/main.55e7838a.chunk.css.map",
-    "static/js/2.07da94d9.chunk.js.LICENSE.txt": "/zing-deploy/static/js/2.07da94d9.chunk.js.LICENSE.txt"
+    "static/css/2.c02757eb.chunk.css.map": "/zing-deploy/static/css/2.c02757eb.chunk.css.map",
+    "static/css/main.5208dd7b.chunk.css.map": "/zing-deploy/static/css/main.5208dd7b.chunk.css.map",
+    "static/js/2.45c6a765.chunk.js.LICENSE.txt": "/zing-deploy/static/js/2.45c6a765.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.df0a331c.js",
-    "static/css/2.00bb4513.chunk.css",
-    "static/js/2.07da94d9.chunk.js",
-    "static/css/main.55e7838a.chunk.css",
-    "static/js/main.cbb88350.chunk.js"
+    "static/js/runtime-main.0b359bbd.js",
+    "static/css/2.c02757eb.chunk.css",
+    "static/js/2.45c6a765.chunk.js",
+    "static/css/main.5208dd7b.chunk.css",
+    "static/js/main.f768ace2.chunk.js"
   ]
 }
