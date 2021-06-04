@@ -155,8 +155,8 @@ const listItem = [
   },
 ];
 
-const renderList = listItem.map((item) => (
-  <SongCategoryItem key={Math.random()} item={item} />
+const renderList = listItem.map(({ name, sub, index }) => (
+  <SongCategoryItem key={index} name={name} sub={sub} />
 ));
 
 const SongCategoryList = () => (

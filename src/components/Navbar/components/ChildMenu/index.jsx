@@ -6,9 +6,10 @@ import ChildMenuList from "../ChildMenuList";
 import "./style.scss";
 
 const ChildMenu = ({ sub }) => {
-  const renderList = sub.map((item) => (
-    <ChildMenuList key={item.path} title={item.title} list={item.name} />
+  const renderList = sub.map(({ title, name, index }) => (
+    <ChildMenuList key={index} title={title} name={name} />
   ));
+  
   return (
     <div className="child-menu-wrapper">
       <div className="child-menu">{renderList}</div>
