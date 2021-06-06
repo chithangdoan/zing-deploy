@@ -6,11 +6,12 @@ import ChildMenuTitle from "../ChildMenuTitle";
 // scss
 import "./style.scss";
 
-const ChildMenuList = ({ title, list }) => (
+const ChildMenuList = ({ title, name }) => (
   <div className="child-menu-list">
     <ChildMenuTitle title={title} />
-    {list.map(({ item, index }) => (
-      <ChildMenuLink key={index} link={item} />
+    {name.map((item, index) => (
+      // eslint-disable-next-line react/no-array-index-key
+      <ChildMenuLink key={index} item={item} />
     ))}
   </div>
 );

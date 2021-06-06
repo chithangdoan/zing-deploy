@@ -1,5 +1,6 @@
+// libs
 import React from "react";
 
-const VietSongLeft = () => <div>VietSongLeft</div>;
+const VietSongLeft = () => <div className="viet-song-left"></div>;
 
 export default VietSongLeft;

@@ -4,7 +4,7 @@ import React from "react";
 import HotArtistItemPhoto from "../HotArtistItemPhoto";
 
 const HotArtistItem = ({ item }) => (
-  <div>
+  <div className="hot-artist-item">
     <HotArtistItemPhoto img={item.img} />
   </div>
 );

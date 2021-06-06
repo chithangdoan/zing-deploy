@@ -2,15 +2,16 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // actions
-import { fetchPaginationAlbum } from "../actions/album";
 import { fetchPaginationVideo } from "../actions/video";
+import { fetchPaginationAlbum } from "../actions/album";
+import { fetchPaginationLove } from "../actions/love";
 
 const usePagination = (name, isHovered) => {
   const [page, setPage] = useState(1);
 
   const listKeys = ["ArrowUp", "ArrowDown", "PageUp", "PageDown"];
 
-  const pageLast = Math.ceil(20 / 12);
+  const pageLast = Math.ceil(5 / 2);
 
   const [previousDisable, setPreviousDisable] = useState(false);
 
@@ -23,7 +24,7 @@ const usePagination = (name, isHovered) => {
   useEffect(() => {
     switch (name) {
       case "video":
-        dispatch(fetchPaginationVideo(page, 12));
+        dispatch(fetchPaginationVideo(page, 2));
 
         if (page < 1) {
           setPage(1);
@@ -47,7 +48,7 @@ const usePagination = (name, isHovered) => {
         break;
 
       case "album":
-        dispatch(fetchPaginationAlbum(page, 12));
+        dispatch(fetchPaginationAlbum(page, 2));
 
         if (page < 1) {
           setPage(1);
@@ -70,6 +71,30 @@ const usePagination = (name, isHovered) => {
         }
 
         break;
+
+      case "love":
+        dispatch(fetchPaginationLove(page, 2));
+
+        if (page < 1) {
+          setPage(1);
+        }
+
+        if (page > pageLast) {
+          setPage(pageLast);
+        }
+
+        if (page === 1) {
+          setPreviousDisable(true);
+        } else {
+          setPreviousDisable(false);
+        }
+
+        if (page === pageLast) {
+          setNextDisable(true);
+        } else {
+          setNextDisable(false);
+        }
+        break;
       default:
         break;
     }
@@ -78,16 +103,12 @@ const usePagination = (name, isHovered) => {
   const clickPreviousHandler = () => {
     if (page > 1 && page <= pageLast) {
       setPage(page - 1);
-      // eslint-disable-next-line no-console
-      console.log(`Previous ${page}`);
     }
   };
 
   const clickBackHandler = () => {
     if (page >= 1 && page < pageLast) {
       setPage(page + 1);
-      // eslint-disable-next-line no-console
-      console.log(`Back ${page}`);
     }
   };
 
@@ -99,15 +120,11 @@ const usePagination = (name, isHovered) => {
         case "ArrowUp":
         case "PageUp":
           setPage(page + 1);
-          // eslint-disable-next-line no-console
-          console.log(`page = ${page}`);
           break;
 
         case "ArrowDown":
         case "PageDown":
           setPage(page - 1);
-          // eslint-disable-next-line no-console
-          console.log(`page = ${page}`);
           break;
 
         default:

@@ -3,9 +3,9 @@ import React from "react";
 // SCSS
 import "./style.scss";
 
-const ChildMenuLink = ({ link }) => (
+const ChildMenuLink = ({ item }) => (
   <div className="child-menu-link">
-    <a>{link}</a>
+    <a>{item}</a>
   </div>
 );
 

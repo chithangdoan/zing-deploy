@@ -6,7 +6,7 @@ import VietSongToolItem from "../VietSongToolItem";
 import "./style.scss";
 
 const VietSongToolList = () => (
-  <div className="viet-song-tool-list">
+  <div className="viet-song-tool">
     <VietSongToolItem />
   </div>
 );

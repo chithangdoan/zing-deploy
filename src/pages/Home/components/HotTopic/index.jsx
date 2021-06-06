@@ -1,4 +1,6 @@
+// libs
 import React from "react";
+// components
 import HotTopicList from "../HotTopicList";
 import HotTopicName from "../HotTopicName";
 

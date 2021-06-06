@@ -9,10 +9,10 @@ const ContentRight = () => (
   <div className="content-right">
     <YourFavouriteSong />
     <HotTopic />
-    <HotTopic />
     <WeekMV />
-    <HotTopic />
-    <HotTopic />
+    <WeekMV />
+    <WeekMV />
+    <WeekMV />
   </div>
 );
 

@@ -155,12 +155,12 @@ const listItem = [
   },
 ];
 
-const renderList = listItem.map((item) => (
-  <SongCategoryItem key={Math.random()} item={item} />
-));
-
 const SongCategoryList = () => (
-  <div className="song-category-list">{renderList}</div>
+  <div className="song-category-list">
+    {listItem.map(({ name, sub, index }) => (
+      <SongCategoryItem key={index} name={name} sub={sub} />
+    ))}
+  </div>
 );
 
 export default SongCategoryList;

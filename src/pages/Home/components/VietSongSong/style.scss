@@ -1,4 +1,7 @@
 .viet-song-song {
   font-size: 14px;
   color: black;
+  &:hover {
+    color: purple;
+  }
 }

@@ -6,20 +6,10 @@ import VideoHotPagination from "../VideoHotPagination";
 // scss
 import "./style.scss";
 
-const VideoHotTop = ({
-  clickPreviousHandler,
-  clickBackHandler,
-  previousDisable,
-  nextDisable,
-}) => (
+const VideoHotTop = () => (
   <div className="video-hot-top">
     <VideoHotLink />
-    <VideoHotPagination
-      clickPreviousHandler={clickPreviousHandler}
-      previousDisable={previousDisable}
-      clickBackHandler={clickBackHandler}
-      nextDisable={nextDisable}
-    />
+    <VideoHotPagination />
   </div>
 );
 

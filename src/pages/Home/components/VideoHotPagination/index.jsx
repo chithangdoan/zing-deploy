@@ -1,38 +1,42 @@
 // libs
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "antd";
 import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
-// scss
+// contexts
+import PaginationContext from "../../../../contexts/paginationContext";
+// css
 import "./style.scss";
 
-const VideoHotPagination = ({
-  clickPreviousHandler,
-  clickBackHandler,
-  previousDisable,
-  nextDisable,
-}) => (
-  <div>
+const VideoHotPagination = () => {
+  const {
+    clickPreviousHandlerVideo,
+    clickBackHandlerVideo,
+    previousDisableVideo,
+    nextDisableVideo,
+  } = useContext(PaginationContext);
+
+  return (
     <div className="video-hot-pagination">
       <Button
-        disabled={previousDisable}
+        disabled={previousDisableVideo}
         type="primary"
         onClick={() => {
-          clickPreviousHandler();
+          clickPreviousHandlerVideo();
         }}
       >
         <CaretLeftOutlined />
       </Button>
       <Button
-        disabled={nextDisable}
+        disabled={nextDisableVideo}
         onClick={() => {
-          clickBackHandler();
+          clickBackHandlerVideo();
         }}
         type="primary"
       >
         <CaretRightOutlined />
       </Button>
     </div>
-  </div>
-);
+  );
+};
 
 export default VideoHotPagination;

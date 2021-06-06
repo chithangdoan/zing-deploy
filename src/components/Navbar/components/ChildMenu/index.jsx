@@ -5,15 +5,14 @@ import ChildMenuList from "../ChildMenuList";
 // SCSS
 import "./style.scss";
 
-const ChildMenu = ({ sub }) => {
-  const renderList = sub.map((item) => (
-    <ChildMenuList key={item.path} title={item.title} list={item.name} />
-  ));
-  return (
-    <div className="child-menu-wrapper">
-      <div className="child-menu">{renderList}</div>
+const ChildMenu = ({ sub }) => (
+  <div className="child-menu-wrapper">
+    <div className="child-menu">
+      {sub.map(({ title, name, index }) => (
+        <ChildMenuList key={index} title={title} name={name} />
+      ))}
     </div>
-  );
-};
+  </div>
+);
 
 export default ChildMenu;

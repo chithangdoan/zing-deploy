@@ -6,10 +6,10 @@ import ChildMenu from "../ChildMenu";
 // scss
 import "./style.scss";
 
-const SongCategoryItem = ({ item }) => (
+const SongCategoryItem = ({ name, sub }) => (
   <div className="song-category-item">
-    <SongCategoryLink name={item.name} />
-    <ChildMenu sub={item.sub} />
+    <SongCategoryLink name={name} />
+    <ChildMenu sub={sub} />
   </div>
 );
 

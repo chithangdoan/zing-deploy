@@ -1,8 +1,15 @@
 .viet-song-tool-item {
   display: grid;
   grid-template-columns: repeat(3, max-content);
-  grid-template-rows: auto;
-  grid-gap: 10px 10px;
+  grid-gap: 0 10px;
 
   justify-items: end;
+
+  opacity: 0;
+  & div {
+    & span:hover {
+      cursor: pointer;
+      color: purple !important;
+    }
+  }
 }
