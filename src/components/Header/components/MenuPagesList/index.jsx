@@ -4,7 +4,7 @@ import classNames from "classnames";
 // Components
 import MenuPagesItem from "../MenuPagesItem";
 // constant
-import { ROUTES } from "../../../../routes/AppRoute";
+import { ROUTES } from "../../../../routes/appRoute";
 // hooks
 import useLocale from "../../../../hooks/useLocale";
 // SCSS

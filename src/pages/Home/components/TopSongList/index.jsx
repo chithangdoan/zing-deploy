@@ -5,13 +5,12 @@ import TopSongItem from "../TopSongItem";
 // scss
 import "./style.scss";
 
-const TopSongList = ({ topSong, activeIndex, handleMouseEnter }) => {
-  const RenderList = topSong.map((item) => (
+const TopSongList = ({ topSong, imageDefault, handleMouseEnter }) => {
+  const RenderList = topSong.map(({ img }) => (
     <TopSongItem
       key={Math.random()}
-      item={item}
-      topSong={topSong}
-      activeIndex={activeIndex}
+      img={img}
+      imageDefault={imageDefault}
       handleMouseEnter={handleMouseEnter}
     />
   ));

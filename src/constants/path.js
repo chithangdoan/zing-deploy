@@ -1,5 +1,5 @@
 export const PATH = {
-  HOME: "/",
+  HOME: "/zing-deploy",
   ABOUT: "/about",
   ZING_DEPLOY: "/zing-deploy",
 };

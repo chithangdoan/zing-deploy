@@ -13,12 +13,13 @@ const TopSong = () => {
 
   useEffect(() => {
     const time = setInterval(() => {
+      setImageDefault(topSong[activeIdx].img);
+
       if (activeIdx >= topSong.length - 1) {
         setActiveIdx(0);
       } else {
         setActiveIdx(activeIdx + 1);
       }
-      setImageDefault(topSong[activeIdx].img);
     }, 3000);
 
     return () => clearInterval(time);
@@ -38,7 +39,7 @@ const TopSong = () => {
       <TopSongMain imageDefault={imageDefault} />
       <TopSongList
         topSong={topSong}
-        activeIndex={activeIdx}
+        imageDefault={imageDefault}
         handleMouseEnter={handleMouseEnter}
       />
     </div>
