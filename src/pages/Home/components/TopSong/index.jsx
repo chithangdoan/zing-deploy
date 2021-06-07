@@ -7,6 +7,7 @@ import TopSongMain from "../TopSongMain";
 import { topSong } from "../../../../mocks/Home/topSong";
 
 const TopSong = () => {
+  
   const [activeIdx, setActiveIdx] = useState(0);
 
   const [imageDefault, setImageDefault] = useState(topSong[activeIdx].img);
